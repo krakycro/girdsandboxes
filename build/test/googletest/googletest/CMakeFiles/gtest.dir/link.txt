@@ -1,0 +1,2 @@
+C:/msys64/usr/bin/ar.exe qc ../../../lib/libgtest.a  CMakeFiles/gtest.dir/src/gtest-all.cc.o
+C:/msys64/usr/bin/ranlib.exe ../../../lib/libgtest.a

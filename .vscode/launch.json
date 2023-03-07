@@ -8,26 +8,26 @@
             "name": "(Windows) Launch",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceRoot}\\main.exe",
+            "program": "${workspaceRoot}/build/GridAndBoxes.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
             "console": "externalTerminal",
-            "preLaunchTask": "cppbuild",
+            // "preLaunchTask": "cppbuild",
         },
         {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}\\main.exe",
+            "program": "${workspaceRoot}/build/GridAndBoxes.exe",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "${workspaceRoot}",
             "externalConsole": false,
             "environment": [],
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
+            "miDebuggerPath": "C:/mingw64/bin/gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -35,7 +35,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "cppbuild",
+            // "preLaunchTask": "cppbuild",
 
         }
     ]
