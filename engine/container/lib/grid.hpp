@@ -8,6 +8,9 @@
 #include "object.hpp"
 #include "box.hpp"
 
+namespace Container
+{
+
 class Box;
 class Object;
 
@@ -17,6 +20,7 @@ public:
     size_t size_x, size_y, size_z;
     std::vector<std::vector<std::vector<std::shared_ptr<Box>>>> coord;
 
+public:
     Grid(size_t x, size_t y, size_t z);
 
     void set_coord(size_t x, size_t y, size_t z);
@@ -27,5 +31,7 @@ public:
 
     static void swap(std::shared_ptr<Box>& a, std::shared_ptr<Box>& b);
 };
+
+}; // Container
 
 #endif // GRID_HPP

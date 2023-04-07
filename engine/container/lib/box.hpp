@@ -7,6 +7,9 @@
 #include "coord.hpp"
 #include "object.hpp"
 
+namespace Container
+{
+
 class Object;
 
 class Box: public Coord
@@ -14,14 +17,18 @@ class Box: public Coord
 public:
     // Coord coord;
     std::shared_ptr<Box> self;
-    static std::shared_ptr<Box> null;
     std::unordered_map<size_t, std::shared_ptr<Object>> obj;
+
+public:
+    static std::shared_ptr<Box> null;
 
     Box();
     Box(const Box& o) = delete;
     Box(const Box&&) = delete;
 
-    std::shared_ptr<Object>& at(size_t key);
+    std::shared_ptr<Object>& at(size_t i);
+
+    std::shared_ptr<Object>& get(size_t key);
 
     void insert();
 
@@ -30,5 +37,7 @@ public:
     static void swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b);
 
 };
+
+}; // Container
 
 #endif // BOX_HPP

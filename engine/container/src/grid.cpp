@@ -3,6 +3,9 @@
 
 #include "grid.hpp"
 
+namespace Container
+{
+
 Grid::Grid(size_t size_x, size_t size_y, size_t size_z)
 {
     this->size_x = size_x;
@@ -43,7 +46,7 @@ std::shared_ptr<Box>& Grid::at(size_t x, size_t y, size_t z)
     }
     else
     {
-
+        
     }
     return *tmp;
 }
@@ -79,3 +82,5 @@ void Grid::swap(std::shared_ptr<Box>& a, std::shared_ptr<Box>& b)
         
     }
 }
+
+}; // Container

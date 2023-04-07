@@ -2,24 +2,27 @@
 
 #include "box.hpp"
 
+namespace Container
+{
+
 std::shared_ptr<Box> Box::null(nullptr);
 
 Box::Box(){}
 
-std::shared_ptr<Object>& Box::at(size_t key)
+std::shared_ptr<Object>& Box::at(size_t i)
 {
-    // return this->obj.at(key);
+    // OLD: return this->obj.at(i);
     std::shared_ptr<Object>* tmp = &Object::null;
-    if(key < this->obj.size())
+    if(i < this->obj.size())
     {
-        auto i = this->obj.begin();
-        for(auto c = 0 ; c < key ; c++)
+        auto iter = this->obj.begin();
+        for(auto c = 0 ; c < i ; c++)
         {
-            i++;
+            iter++;
         }
-        if((i->second != nullptr)) // No need: && (this->obj.find(i->second->key) != this->obj.end()))
+        if((iter->second != nullptr)) // No need: && (this->obj.find(iter->second->key) != this->obj.end()))
         {
-            tmp = &this->obj.at(i->second->key);
+            tmp = &this->obj.at(iter->second->key);
         }
         else
         {
@@ -33,9 +36,26 @@ std::shared_ptr<Object>& Box::at(size_t key)
     return *tmp;
 }
 
+std::shared_ptr<Object>& Box::get(size_t key)
+{
+    std::shared_ptr<Object>* tmp = &Object::null;
+    if(this->obj.contains(key) == true)
+    {
+        if(this->obj.at(key) != nullptr)
+        {
+            tmp = &this->obj.at(key);
+        }
+    }
+    else
+    {
+
+    }
+    return *tmp;
+}
+
 void Box::insert()
 {
-    auto tmp = Object::Create();
+    auto tmp = Object::create();
     tmp->root = this->self;
     this->obj.insert({tmp->key, std::move(tmp)});
 }
@@ -45,7 +65,14 @@ void Box::insert(std::shared_ptr<Object>& a)
     if(a != nullptr)
     {
         a->root = this->self;
-        this->obj.insert({a->key, std::move(a)});
+        if(this->obj.contains(a->key) == true)
+        {
+            this->obj[a->key] = std::move(a);
+        }
+        else
+        {
+            this->obj.insert({a->key, std::move(a)});
+        }
     }
     else
     {
@@ -71,3 +98,4 @@ void Box::swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b)
     }
 }
 
+}; // Container

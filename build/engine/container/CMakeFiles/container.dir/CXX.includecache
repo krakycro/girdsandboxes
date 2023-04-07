@@ -22,18 +22,6 @@ cstddef
 tuple
 -
 
-../engine/container/lib/grid.hpp
-memory
--
-vector
--
-coord.hpp
-../engine/container/lib/coord.hpp
-object.hpp
-../engine/container/lib/object.hpp
-box.hpp
-../engine/container/lib/box.hpp
-
 ../engine/container/lib/object.hpp
 memory
 -
@@ -49,26 +37,4 @@ memory
 -
 box.hpp
 D:/github/girdsandboxes/engine/container/src/box.hpp
-
-D:/github/girdsandboxes/engine/container/src/coord.cpp
-tuple
--
-coord.hpp
-D:/github/girdsandboxes/engine/container/src/coord.hpp
-
-D:/github/girdsandboxes/engine/container/src/grid.cpp
-memory
--
-vector
--
-grid.hpp
-D:/github/girdsandboxes/engine/container/src/grid.hpp
-
-D:/github/girdsandboxes/engine/container/src/object.cpp
-memory
--
-unordered_map
--
-object.hpp
-D:/github/girdsandboxes/engine/container/src/object.hpp
 
