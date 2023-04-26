@@ -21,9 +21,7 @@ Grid::Grid(size_t size_x, size_t size_y, size_t size_z)
             {
                 auto tmp = std::make_shared<Box>();
                 tmp->self = tmp;
-                tmp->x = i;
-                tmp->y = j;
-                tmp->z = k;
+                tmp->set_coord(i, j, k);
                 this->coord.at(i).at(j).push_back(std::move(tmp));
             }
         }
@@ -65,8 +63,9 @@ std::shared_ptr<Object>& Grid::at(size_t x, size_t y, size_t z, size_t o)
     return *tmp;
 }
 
-void Grid::swap(std::shared_ptr<Box>& a, std::shared_ptr<Box>& b)
+cont_status Grid::swap(std::shared_ptr<Box>& a, std::shared_ptr<Box>& b)
 {
+    cont_status ret = cont_status::CONT_NOK;
     if((a != nullptr) && (b != nullptr) && (a.get() != b.get()))
     {
         auto coordA = a->get_coord();
@@ -76,11 +75,14 @@ void Grid::swap(std::shared_ptr<Box>& a, std::shared_ptr<Box>& b)
         a->set_coord(coordA);
         b = std::move(tmp);
         b->set_coord(coordB);
+
+        ret = cont_status::CONT_OK;
     }
     else
     {
         
     }
+    return ret;
 }
 
 }; // Container

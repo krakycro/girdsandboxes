@@ -80,22 +80,23 @@ void Box::insert(std::shared_ptr<Object>& a)
     }
 }
 
-void Box::swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b)
+cont_status Box::swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b)
 {
+    cont_status ret = cont_status::CONT_NOK;
     if((a != nullptr) && (b != nullptr) && (a->key != b->key))
     { 
         auto rootA = a->root;
         auto rootB = b->root;
-        auto tmp = std::move(a);
-        a = std::move(b);
-        a->root = rootA;
-        b = std::move(tmp);
-        b->root = rootB;
+        rootA->insert(b);
+        rootB->insert(a);
+
+        ret = cont_status::CONT_OK;
     }
     else
     {
         
     }
+    return ret;
 }
 
 }; // Container

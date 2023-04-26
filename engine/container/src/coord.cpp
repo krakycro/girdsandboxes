@@ -27,4 +27,19 @@ void Coord::set_coord(std::tuple<size_t, size_t, size_t>& t)
     this->z = std::get<2>(t);
 }
 
+size_t Coord::get_x() const
+{
+    return this->x;
+}
+
+size_t Coord::get_y() const
+{
+    return this->y;
+}
+
+size_t Coord::get_z() const
+{
+    return this->z;
+}
+
 }; // Container

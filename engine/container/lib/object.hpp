@@ -4,6 +4,7 @@
 #include <memory>
 #include <unordered_map>
 
+#include "general.hpp"
 #include "box.hpp"
 #include "coord.hpp"
 
@@ -17,12 +18,14 @@ class Object
 public:
     std::shared_ptr<Box> root;
     std::shared_ptr<Object> self;
-    static size_t oid;
-    static std::unordered_map<size_t, std::shared_ptr<Object>> olist;
+
     size_t key;
 
-public:
+    static size_t oid;
+    static std::unordered_map<size_t, std::shared_ptr<Object>> olist;
     static std::shared_ptr<Object> null;
+
+public:
     int val;
 
     Object() = default;
