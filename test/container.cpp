@@ -100,7 +100,7 @@ TEST(Container, SwapGridFail)
    auto b2 = GRID->at(1,1,1);
 
    EXPECT_NO_THROW({
-      ASSERT_TRUE(Container::Grid::swap(b1, b1) == Container::cont_status::CONT_NOK );
+      ASSERT_TRUE(Container::Grid::swap(GRID->at(1,1,0), GRID->at(1,1,0)) == Container::cont_status::CONT_NOK );
    });
 
    std::cout << "Checking get" << std::endl;

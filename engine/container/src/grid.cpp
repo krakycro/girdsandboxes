@@ -8,16 +8,16 @@ namespace Container
 
 Grid::Grid(size_t size_x, size_t size_y, size_t size_z)
 {
-    this->size_x = size_x;
-    this->size_y = size_y;
-    this->size_z = size_z;
-    for(int i=0; i < size_x; i++)
+    this->size_x = size_x < 1 ? 1 : size_x;
+    this->size_y = size_y < 1 ? 1 : size_y;
+    this->size_z = size_z < 1 ? 1 : size_z;
+    for(int i=0; i < this->size_x; i++)
     {
         this->coord.push_back(std::vector<std::vector<std::shared_ptr<Box>>>());
-        for(int j=0; j < size_y; j++)
+        for(int j=0; j < this->size_y; j++)
         {
             this->coord.at(i).push_back(std::vector<std::shared_ptr<Box>>());
-            for(int k=0; k < size_z; k++)
+            for(int k=0; k < this->size_z; k++)
             {
                 auto tmp = std::make_shared<Box>();
                 tmp->self = tmp;
