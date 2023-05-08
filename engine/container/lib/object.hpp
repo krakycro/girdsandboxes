@@ -15,15 +15,17 @@ class Box;
 
 class Object
 {
-public:
-    std::shared_ptr<Box> root;
-    std::shared_ptr<Object> self;
+    friend Box;
+
+private:
+    container_ptr<Box> root;
+    container_ptr<Object> self;
 
     size_t key;
 
     static size_t oid;
-    static std::unordered_map<size_t, std::shared_ptr<Object>> olist;
-    static std::shared_ptr<Object> null;
+    static std::unordered_map<size_t, container_ptr<Object>> olist;
+    // static container_ptr<Object> null;
 
 public:
     int val;
@@ -32,9 +34,18 @@ public:
     Object(const Object& o) = delete;
     Object(const Object&&) = delete;
 
-    const Coord* get_coord();
+    static container_ptr<Object>& create();
 
-    static std::shared_ptr<Object>& create();
+    const Coord* get_coord() const;
+    const container_ptr<Box>& get_root() const;
+    const container_ptr<Object>& get_self() const;
+    const size_t get_key() const;
+
+private:
+    void set_root(const container_ptr<Box>& root_obj);
+    void set_self(const container_ptr<Object>& self_obj);
+    void set_key(size_t new_key);
+
 };
 
 }; // Container

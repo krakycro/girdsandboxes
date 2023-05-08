@@ -28,30 +28,30 @@ The CXX compiler identification is GNU, found in "d:/github/girdsandboxes/build/
 Determining if the C compiler works passed with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_c6bfc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c6bfc.dir/build.make CMakeFiles/cmTC_c6bfc.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_7a487/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7a487.dir/build.make CMakeFiles/cmTC_7a487.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c6bfc.dir/testCCompiler.c.obj
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe    -o CMakeFiles/cmTC_c6bfc.dir/testCCompiler.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_c6bfc.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_c6bfc.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_c6bfc.dir/objects.a @CMakeFiles/cmTC_c6bfc.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_c6bfc.dir/objects.a -Wl,--no-whole-archive  -o cmTC_c6bfc.exe -Wl,--out-implib,libcmTC_c6bfc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building C object CMakeFiles/cmTC_7a487.dir/testCCompiler.c.obj
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe    -o CMakeFiles/cmTC_7a487.dir/testCCompiler.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_7a487.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_7a487.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_7a487.dir/objects.a @CMakeFiles/cmTC_7a487.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_7a487.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7a487.exe -Wl,--out-implib,libcmTC_7a487.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_20ada/fast"
-/usr/bin/make -f CMakeFiles/cmTC_20ada.dir/build.make CMakeFiles/cmTC_20ada.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_09736/fast"
+/usr/bin/make -f CMakeFiles/cmTC_09736.dir/build.make CMakeFiles/cmTC_09736.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_20ada.dir/CMakeCCompilerABI.c.obj
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe    -o CMakeFiles/cmTC_20ada.dir/CMakeCCompilerABI.c.obj   -c "C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCCompilerABI.c"
-Linking C executable cmTC_20ada.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_20ada.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_20ada.dir/objects.a @CMakeFiles/cmTC_20ada.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe     -v -Wl,--whole-archive CMakeFiles/cmTC_20ada.dir/objects.a -Wl,--no-whole-archive  -o cmTC_20ada.exe -Wl,--out-implib,libcmTC_20ada.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building C object CMakeFiles/cmTC_09736.dir/CMakeCCompilerABI.c.obj
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe    -o CMakeFiles/cmTC_09736.dir/CMakeCCompilerABI.c.obj   -c "C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCCompilerABI.c"
+Linking C executable cmTC_09736.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_09736.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_09736.dir/objects.a @CMakeFiles/cmTC_09736.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe     -v -Wl,--whole-archive CMakeFiles/cmTC_09736.dir/objects.a -Wl,--no-whole-archive  -o cmTC_09736.exe -Wl,--out-implib,libcmTC_09736.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Using built-in specs.
 COLLECT_GCC=C:/msys64/usr/bin/gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe
@@ -62,9 +62,9 @@ Supported LTO compression algorithms: zlib
 gcc version 11.3.0 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/bin/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20ada.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_20ada.'
- /usr/lib/gcc/x86_64-pc-msys/11.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-msys/11.3.0/msys-lto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/ccp7EmEz.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmsys-2.0 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=msys- --tsaware -o cmTC_20ada.exe /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-msys/11.3.0 -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../.. --whole-archive CMakeFiles/cmTC_20ada.dir/objects.a --no-whole-archive --out-implib libcmTC_20ada.dll.a --major-image-version 0 --minor-image-version 0 -lgcc_s -lgcc -lmsys-2.0 -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20ada.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_20ada.'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09736.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_09736.'
+ /usr/lib/gcc/x86_64-pc-msys/11.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-msys/11.3.0/msys-lto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/cc6LiT60.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmsys-2.0 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=msys- --tsaware -o cmTC_09736.exe /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-msys/11.3.0 -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../.. --whole-archive CMakeFiles/cmTC_09736.dir/objects.a --no-whole-archive --out-implib libcmTC_09736.dll.a --major-image-version 0 --minor-image-version 0 -lgcc_s -lgcc -lmsys-2.0 -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09736.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_09736.'
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
@@ -72,15 +72,15 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_20ada/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_20ada.dir/build.make CMakeFiles/cmTC_20ada.dir/build]
+  ignore line: [Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_09736/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_09736.dir/build.make CMakeFiles/cmTC_09736.dir/build]
   ignore line: [make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_20ada.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe    -o CMakeFiles/cmTC_20ada.dir/CMakeCCompilerABI.c.obj   -c "C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCCompilerABI.c"]
-  ignore line: [Linking C executable cmTC_20ada.exe]
-  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_20ada.dir/objects.a]
-  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_20ada.dir/objects.a @CMakeFiles/cmTC_20ada.dir/objects1.rsp]
-  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe     -v -Wl,--whole-archive CMakeFiles/cmTC_20ada.dir/objects.a -Wl,--no-whole-archive  -o cmTC_20ada.exe -Wl,--out-implib,libcmTC_20ada.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
+  ignore line: [Building C object CMakeFiles/cmTC_09736.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe    -o CMakeFiles/cmTC_09736.dir/CMakeCCompilerABI.c.obj   -c "C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCCompilerABI.c"]
+  ignore line: [Linking C executable cmTC_09736.exe]
+  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_09736.dir/objects.a]
+  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_09736.dir/objects.a @CMakeFiles/cmTC_09736.dir/objects1.rsp]
+  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe     -v -Wl,--whole-archive CMakeFiles/cmTC_09736.dir/objects.a -Wl,--no-whole-archive  -o cmTC_09736.exe -Wl,--out-implib,libcmTC_09736.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:/msys64/usr/bin/gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe]
@@ -91,13 +91,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 11.3.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/bin/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20ada.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_20ada.']
-  link line: [ /usr/lib/gcc/x86_64-pc-msys/11.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-msys/11.3.0/msys-lto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/ccp7EmEz.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmsys-2.0 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=msys- --tsaware -o cmTC_20ada.exe /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-msys/11.3.0 -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../.. --whole-archive CMakeFiles/cmTC_20ada.dir/objects.a --no-whole-archive --out-implib libcmTC_20ada.dll.a --major-image-version 0 --minor-image-version 0 -lgcc_s -lgcc -lmsys-2.0 -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09736.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_09736.']
+  link line: [ /usr/lib/gcc/x86_64-pc-msys/11.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-msys/11.3.0/msys-lto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/cc6LiT60.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmsys-2.0 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=msys- --tsaware -o cmTC_09736.exe /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-msys/11.3.0 -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../.. --whole-archive CMakeFiles/cmTC_09736.dir/objects.a --no-whole-archive --out-implib libcmTC_09736.dll.a --major-image-version 0 --minor-image-version 0 -lgcc_s -lgcc -lmsys-2.0 -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtend.o]
     arg [/usr/lib/gcc/x86_64-pc-msys/11.3.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-msys/11.3.0/msys-lto_plugin.dll] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/ccp7EmEz.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/cc6LiT60.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lmsys-2.0] ==> ignore
@@ -130,7 +130,7 @@ Parsed C implicit link information from above output:
     arg [--dll-search-prefix=msys-] ==> ignore
     arg [--tsaware] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_20ada.exe] ==> ignore
+    arg [cmTC_09736.exe] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/crt0.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-msys/11.3.0/crtbegin.o] ==> ignore
     arg [-L/usr/lib/gcc/x86_64-pc-msys/11.3.0] ==> dir [/usr/lib/gcc/x86_64-pc-msys/11.3.0]
@@ -140,10 +140,10 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib] ==> dir [/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib]
     arg [-L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../..]
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles/cmTC_20ada.dir/objects.a] ==> ignore
+    arg [CMakeFiles/cmTC_09736.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_20ada.dll.a] ==> ignore
+    arg [libcmTC_09736.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
@@ -175,15 +175,15 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_dcfde/fast"
-/usr/bin/make -f CMakeFiles/cmTC_dcfde.dir/build.make CMakeFiles/cmTC_dcfde.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_5cfb6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5cfb6.dir/build.make CMakeFiles/cmTC_5cfb6.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_dcfde.dir/feature_tests.c.obj
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe   -std=c11 -o CMakeFiles/cmTC_dcfde.dir/feature_tests.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_dcfde.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_dcfde.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_dcfde.dir/objects.a @CMakeFiles/cmTC_dcfde.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_dcfde.dir/objects.a -Wl,--no-whole-archive  -o cmTC_dcfde.exe -Wl,--out-implib,libcmTC_dcfde.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building C object CMakeFiles/cmTC_5cfb6.dir/feature_tests.c.obj
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe   -std=c11 -o CMakeFiles/cmTC_5cfb6.dir/feature_tests.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5cfb6.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_5cfb6.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_5cfb6.dir/objects.a @CMakeFiles/cmTC_5cfb6.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_5cfb6.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5cfb6.exe -Wl,--out-implib,libcmTC_5cfb6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
@@ -196,15 +196,15 @@ make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_94f79/fast"
-/usr/bin/make -f CMakeFiles/cmTC_94f79.dir/build.make CMakeFiles/cmTC_94f79.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_ba58e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ba58e.dir/build.make CMakeFiles/cmTC_ba58e.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_94f79.dir/feature_tests.c.obj
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe   -std=c99 -o CMakeFiles/cmTC_94f79.dir/feature_tests.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_94f79.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_94f79.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_94f79.dir/objects.a @CMakeFiles/cmTC_94f79.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_94f79.dir/objects.a -Wl,--no-whole-archive  -o cmTC_94f79.exe -Wl,--out-implib,libcmTC_94f79.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building C object CMakeFiles/cmTC_ba58e.dir/feature_tests.c.obj
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe   -std=c99 -o CMakeFiles/cmTC_ba58e.dir/feature_tests.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_ba58e.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_ba58e.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_ba58e.dir/objects.a @CMakeFiles/cmTC_ba58e.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_ba58e.dir/objects.a -Wl,--no-whole-archive  -o cmTC_ba58e.exe -Wl,--out-implib,libcmTC_ba58e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
@@ -217,15 +217,15 @@ make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_3575f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3575f.dir/build.make CMakeFiles/cmTC_3575f.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_72b39/fast"
+/usr/bin/make -f CMakeFiles/cmTC_72b39.dir/build.make CMakeFiles/cmTC_72b39.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3575f.dir/feature_tests.c.obj
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe   -std=c90 -o CMakeFiles/cmTC_3575f.dir/feature_tests.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_3575f.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_3575f.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_3575f.dir/objects.a @CMakeFiles/cmTC_3575f.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_3575f.dir/objects.a -Wl,--no-whole-archive  -o cmTC_3575f.exe -Wl,--out-implib,libcmTC_3575f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building C object CMakeFiles/cmTC_72b39.dir/feature_tests.c.obj
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe   -std=c90 -o CMakeFiles/cmTC_72b39.dir/feature_tests.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_72b39.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_72b39.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_72b39.dir/objects.a @CMakeFiles/cmTC_72b39.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_72b39.dir/objects.a -Wl,--no-whole-archive  -o cmTC_72b39.exe -Wl,--out-implib,libcmTC_72b39.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
@@ -236,30 +236,30 @@ make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 Determining if the CXX compiler works passed with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_aa504/fast"
-/usr/bin/make -f CMakeFiles/cmTC_aa504.dir/build.make CMakeFiles/cmTC_aa504.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_18862/fast"
+/usr/bin/make -f CMakeFiles/cmTC_18862.dir/build.make CMakeFiles/cmTC_18862.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_aa504.dir/testCXXCompiler.cxx.o
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -o CMakeFiles/cmTC_aa504.dir/testCXXCompiler.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_aa504.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_aa504.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_aa504.dir/objects.a @CMakeFiles/cmTC_aa504.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_aa504.dir/objects.a -Wl,--no-whole-archive  -o cmTC_aa504.exe -Wl,--out-implib,libcmTC_aa504.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building CXX object CMakeFiles/cmTC_18862.dir/testCXXCompiler.cxx.o
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -o CMakeFiles/cmTC_18862.dir/testCXXCompiler.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_18862.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_18862.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_18862.dir/objects.a @CMakeFiles/cmTC_18862.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_18862.dir/objects.a -Wl,--no-whole-archive  -o cmTC_18862.exe -Wl,--out-implib,libcmTC_18862.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_76bba/fast"
-/usr/bin/make -f CMakeFiles/cmTC_76bba.dir/build.make CMakeFiles/cmTC_76bba.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_d4aba/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d4aba.dir/build.make CMakeFiles/cmTC_d4aba.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_76bba.dir/CMakeCXXCompilerABI.cpp.o
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -o CMakeFiles/cmTC_76bba.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp"
-Linking CXX executable cmTC_76bba.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_76bba.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_76bba.dir/objects.a @CMakeFiles/cmTC_76bba.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20    -v -Wl,--whole-archive CMakeFiles/cmTC_76bba.dir/objects.a -Wl,--no-whole-archive  -o cmTC_76bba.exe -Wl,--out-implib,libcmTC_76bba.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building CXX object CMakeFiles/cmTC_d4aba.dir/CMakeCXXCompilerABI.cpp.o
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -o CMakeFiles/cmTC_d4aba.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp"
+Linking CXX executable cmTC_d4aba.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_d4aba.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_d4aba.dir/objects.a @CMakeFiles/cmTC_d4aba.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20    -v -Wl,--whole-archive CMakeFiles/cmTC_d4aba.dir/objects.a -Wl,--no-whole-archive  -o cmTC_d4aba.exe -Wl,--out-implib,libcmTC_d4aba.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Using built-in specs.
 COLLECT_GCC=C:/msys64/usr/bin/g++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe
@@ -270,9 +270,9 @@ Supported LTO compression algorithms: zlib
 gcc version 11.3.0 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/bin/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../:/usr/lib/
-COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'cmTC_76bba.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_76bba.'
- /usr/lib/gcc/x86_64-pc-msys/11.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-msys/11.3.0/msys-lto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/cckzU08Z.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmsys-2.0 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=msys- --tsaware -o cmTC_76bba.exe /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-msys/11.3.0 -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../.. --whole-archive CMakeFiles/cmTC_76bba.dir/objects.a --no-whole-archive --out-implib libcmTC_76bba.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lgcc_s -lgcc -lmsys-2.0 -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtend.o
-COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'cmTC_76bba.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_76bba.'
+COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'cmTC_d4aba.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d4aba.'
+ /usr/lib/gcc/x86_64-pc-msys/11.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-msys/11.3.0/msys-lto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/ccmKoOzB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmsys-2.0 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=msys- --tsaware -o cmTC_d4aba.exe /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-msys/11.3.0 -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../.. --whole-archive CMakeFiles/cmTC_d4aba.dir/objects.a --no-whole-archive --out-implib libcmTC_d4aba.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lgcc_s -lgcc -lmsys-2.0 -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtend.o
+COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'cmTC_d4aba.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d4aba.'
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
@@ -280,15 +280,15 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_76bba/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_76bba.dir/build.make CMakeFiles/cmTC_76bba.dir/build]
+  ignore line: [Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_d4aba/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d4aba.dir/build.make CMakeFiles/cmTC_d4aba.dir/build]
   ignore line: [make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_76bba.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -o CMakeFiles/cmTC_76bba.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp"]
-  ignore line: [Linking CXX executable cmTC_76bba.exe]
-  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_76bba.dir/objects.a]
-  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_76bba.dir/objects.a @CMakeFiles/cmTC_76bba.dir/objects1.rsp]
-  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20    -v -Wl,--whole-archive CMakeFiles/cmTC_76bba.dir/objects.a -Wl,--no-whole-archive  -o cmTC_76bba.exe -Wl,--out-implib,libcmTC_76bba.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_d4aba.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -o CMakeFiles/cmTC_d4aba.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files/CMake/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp"]
+  ignore line: [Linking CXX executable cmTC_d4aba.exe]
+  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_d4aba.dir/objects.a]
+  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_d4aba.dir/objects.a @CMakeFiles/cmTC_d4aba.dir/objects1.rsp]
+  ignore line: [cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20    -v -Wl,--whole-archive CMakeFiles/cmTC_d4aba.dir/objects.a -Wl,--no-whole-archive  -o cmTC_d4aba.exe -Wl,--out-implib,libcmTC_d4aba.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:/msys64/usr/bin/g++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe]
@@ -299,13 +299,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 11.3.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/bin/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-msys/11.3.0/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/:/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'cmTC_76bba.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_76bba.']
-  link line: [ /usr/lib/gcc/x86_64-pc-msys/11.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-msys/11.3.0/msys-lto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/cckzU08Z.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmsys-2.0 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=msys- --tsaware -o cmTC_76bba.exe /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-msys/11.3.0 -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../.. --whole-archive CMakeFiles/cmTC_76bba.dir/objects.a --no-whole-archive --out-implib libcmTC_76bba.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lgcc_s -lgcc -lmsys-2.0 -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'cmTC_d4aba.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d4aba.']
+  link line: [ /usr/lib/gcc/x86_64-pc-msys/11.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-msys/11.3.0/msys-lto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/ccmKoOzB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmsys-2.0 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=msys- --tsaware -o cmTC_d4aba.exe /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-msys/11.3.0 -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib -L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../.. --whole-archive CMakeFiles/cmTC_d4aba.dir/objects.a --no-whole-archive --out-implib libcmTC_d4aba.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lgcc_s -lgcc -lmsys-2.0 -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-msys/11.3.0/crtend.o]
     arg [/usr/lib/gcc/x86_64-pc-msys/11.3.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-msys/11.3.0/msys-lto_plugin.dll] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-msys/11.3.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/cckzU08Z.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/c/Users/KRAKY/AppData/Local/Temp/ccmKoOzB.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lmsys-2.0] ==> ignore
@@ -338,7 +338,7 @@ Parsed CXX implicit link information from above output:
     arg [--dll-search-prefix=msys-] ==> ignore
     arg [--tsaware] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_76bba.exe] ==> ignore
+    arg [cmTC_d4aba.exe] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../lib/crt0.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-msys/11.3.0/crtbegin.o] ==> ignore
     arg [-L/usr/lib/gcc/x86_64-pc-msys/11.3.0] ==> dir [/usr/lib/gcc/x86_64-pc-msys/11.3.0]
@@ -348,10 +348,10 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib] ==> dir [/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../../../x86_64-pc-msys/lib]
     arg [-L/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-msys/11.3.0/../../..]
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles/cmTC_76bba.dir/objects.a] ==> ignore
+    arg [CMakeFiles/cmTC_d4aba.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_76bba.dll.a] ==> ignore
+    arg [libcmTC_d4aba.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
@@ -384,15 +384,15 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++2a] compiler features compiled with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_000e3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_000e3.dir/build.make CMakeFiles/cmTC_000e3.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_36d28/fast"
+/usr/bin/make -f CMakeFiles/cmTC_36d28.dir/build.make CMakeFiles/cmTC_36d28.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_000e3.dir/feature_tests.cxx.o
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -std=c++2a -o CMakeFiles/cmTC_000e3.dir/feature_tests.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_000e3.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_000e3.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_000e3.dir/objects.a @CMakeFiles/cmTC_000e3.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_000e3.dir/objects.a -Wl,--no-whole-archive  -o cmTC_000e3.exe -Wl,--out-implib,libcmTC_000e3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building CXX object CMakeFiles/cmTC_36d28.dir/feature_tests.cxx.o
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -std=c++2a -o CMakeFiles/cmTC_36d28.dir/feature_tests.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_36d28.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_36d28.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_36d28.dir/objects.a @CMakeFiles/cmTC_36d28.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_36d28.dir/objects.a -Wl,--no-whole-archive  -o cmTC_36d28.exe -Wl,--out-implib,libcmTC_36d28.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
@@ -458,15 +458,15 @@ make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 Detecting CXX [-std=c++17] compiler features compiled with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_17e27/fast"
-/usr/bin/make -f CMakeFiles/cmTC_17e27.dir/build.make CMakeFiles/cmTC_17e27.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_acf02/fast"
+/usr/bin/make -f CMakeFiles/cmTC_acf02.dir/build.make CMakeFiles/cmTC_acf02.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_17e27.dir/feature_tests.cxx.o
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -std=c++17 -o CMakeFiles/cmTC_17e27.dir/feature_tests.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_17e27.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_17e27.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_17e27.dir/objects.a @CMakeFiles/cmTC_17e27.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_17e27.dir/objects.a -Wl,--no-whole-archive  -o cmTC_17e27.exe -Wl,--out-implib,libcmTC_17e27.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building CXX object CMakeFiles/cmTC_acf02.dir/feature_tests.cxx.o
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -std=c++17 -o CMakeFiles/cmTC_acf02.dir/feature_tests.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_acf02.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_acf02.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_acf02.dir/objects.a @CMakeFiles/cmTC_acf02.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_acf02.dir/objects.a -Wl,--no-whole-archive  -o cmTC_acf02.exe -Wl,--out-implib,libcmTC_acf02.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
@@ -532,15 +532,15 @@ make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_43ecc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_43ecc.dir/build.make CMakeFiles/cmTC_43ecc.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_0203c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0203c.dir/build.make CMakeFiles/cmTC_0203c.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_43ecc.dir/feature_tests.cxx.o
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -std=c++14 -o CMakeFiles/cmTC_43ecc.dir/feature_tests.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_43ecc.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_43ecc.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_43ecc.dir/objects.a @CMakeFiles/cmTC_43ecc.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_43ecc.dir/objects.a -Wl,--no-whole-archive  -o cmTC_43ecc.exe -Wl,--out-implib,libcmTC_43ecc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building CXX object CMakeFiles/cmTC_0203c.dir/feature_tests.cxx.o
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -std=c++14 -o CMakeFiles/cmTC_0203c.dir/feature_tests.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0203c.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_0203c.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_0203c.dir/objects.a @CMakeFiles/cmTC_0203c.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_0203c.dir/objects.a -Wl,--no-whole-archive  -o cmTC_0203c.exe -Wl,--out-implib,libcmTC_0203c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
@@ -606,15 +606,15 @@ make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_e7d98/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e7d98.dir/build.make CMakeFiles/cmTC_e7d98.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_ad3f1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ad3f1.dir/build.make CMakeFiles/cmTC_ad3f1.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e7d98.dir/feature_tests.cxx.o
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -std=c++11 -o CMakeFiles/cmTC_e7d98.dir/feature_tests.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_e7d98.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_e7d98.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_e7d98.dir/objects.a @CMakeFiles/cmTC_e7d98.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_e7d98.dir/objects.a -Wl,--no-whole-archive  -o cmTC_e7d98.exe -Wl,--out-implib,libcmTC_e7d98.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building CXX object CMakeFiles/cmTC_ad3f1.dir/feature_tests.cxx.o
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -std=c++11 -o CMakeFiles/cmTC_ad3f1.dir/feature_tests.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ad3f1.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_ad3f1.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_ad3f1.dir/objects.a @CMakeFiles/cmTC_ad3f1.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_ad3f1.dir/objects.a -Wl,--no-whole-archive  -o cmTC_ad3f1.exe -Wl,--out-implib,libcmTC_ad3f1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
@@ -680,15 +680,15 @@ make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_5f030/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5f030.dir/build.make CMakeFiles/cmTC_5f030.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_6b7d0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6b7d0.dir/build.make CMakeFiles/cmTC_6b7d0.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5f030.dir/feature_tests.cxx.o
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -std=c++98 -o CMakeFiles/cmTC_5f030.dir/feature_tests.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_5f030.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_5f030.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_5f030.dir/objects.a @CMakeFiles/cmTC_5f030.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_5f030.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5f030.exe -Wl,--out-implib,libcmTC_5f030.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building CXX object CMakeFiles/cmTC_6b7d0.dir/feature_tests.cxx.o
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe    -std=gnu++20    -std=c++98 -o CMakeFiles/cmTC_6b7d0.dir/feature_tests.cxx.o -c D:/github/girdsandboxes/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6b7d0.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_6b7d0.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_6b7d0.dir/objects.a @CMakeFiles/cmTC_6b7d0.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/g++.exe  -std=gnu++20     -Wl,--whole-archive CMakeFiles/cmTC_6b7d0.dir/objects.a -Wl,--no-whole-archive  -o cmTC_6b7d0.exe -Wl,--out-implib,libcmTC_6b7d0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
@@ -752,30 +752,30 @@ make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_c0573/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c0573.dir/build.make CMakeFiles/cmTC_c0573.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_786ae/fast"
+/usr/bin/make -f CMakeFiles/cmTC_786ae.dir/build.make CMakeFiles/cmTC_786ae.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c0573.dir/CheckIncludeFile.c.obj
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe    -o CMakeFiles/cmTC_c0573.dir/CheckIncludeFile.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_c0573.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_c0573.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_c0573.dir/objects.a @CMakeFiles/cmTC_c0573.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_c0573.dir/objects.a -Wl,--no-whole-archive  -o cmTC_c0573.exe -Wl,--out-implib,libcmTC_c0573.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building C object CMakeFiles/cmTC_786ae.dir/CheckIncludeFile.c.obj
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe    -o CMakeFiles/cmTC_786ae.dir/CheckIncludeFile.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_786ae.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_786ae.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_786ae.dir/objects.a @CMakeFiles/cmTC_786ae.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_786ae.dir/objects.a -Wl,--no-whole-archive  -o cmTC_786ae.exe -Wl,--out-implib,libcmTC_786ae.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the pthread_create exist passed with the following output:
 Change Dir: d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_f8143/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f8143.dir/build.make CMakeFiles/cmTC_f8143.dir/build
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_859ed/fast"
+/usr/bin/make -f CMakeFiles/cmTC_859ed.dir/build.make CMakeFiles/cmTC_859ed.dir/build
 make[1]: Entering directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f8143.dir/CheckSymbolExists.c.obj
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe    -o CMakeFiles/cmTC_f8143.dir/CheckSymbolExists.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_f8143.exe
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_f8143.dir/objects.a
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_f8143.dir/objects.a @CMakeFiles/cmTC_f8143.dir/objects1.rsp
-cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_f8143.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f8143.exe -Wl,--out-implib,libcmTC_f8143.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building C object CMakeFiles/cmTC_859ed.dir/CheckSymbolExists.c.obj
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe    -o CMakeFiles/cmTC_859ed.dir/CheckSymbolExists.c.obj   -c D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_859ed.exe
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && "C:/Program Files/CMake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_859ed.dir/objects.a
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/ar.exe cr CMakeFiles/cmTC_859ed.dir/objects.a @CMakeFiles/cmTC_859ed.dir/objects1.rsp
+cd D:/github/girdsandboxes/build/CMakeFiles/CMakeTmp && C:/msys64/usr/bin/gcc.exe      -Wl,--whole-archive CMakeFiles/cmTC_859ed.dir/objects.a -Wl,--no-whole-archive  -o cmTC_859ed.exe -Wl,--out-implib,libcmTC_859ed.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 make[1]: Leaving directory '/d/github/girdsandboxes/build/CMakeFiles/CMakeTmp'
 
 File d:/github/girdsandboxes/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
