@@ -27,10 +27,12 @@ public:
     Grid(const Grid&&) = delete;
     Grid(size_t x, size_t y, size_t z);
 
-    container_ptr<Box>* at(size_t x, size_t y, size_t z);
-    container_ptr<Object>* at(size_t x, size_t y, size_t z, size_t o);
+    // container_ptr<Box>* at(size_t x, size_t y, size_t z);
+    const container_ptr<Box>& at(size_t x, size_t y, size_t z);
+    const container_ptr<Object>& at(size_t x, size_t y, size_t z, size_t o);
 
-    static cont_status swap(container_ptr<Box>* a, container_ptr<Box>* b);
+    // static cont_status swap(container_ptr<Box>* a, container_ptr<Box>* b);
+    static cont_status swap(container_ptr<Box>& a, container_ptr<Box>& b);
 
     size_t get_size_x() const;
     size_t get_size_y() const;

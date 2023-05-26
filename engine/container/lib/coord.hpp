@@ -23,7 +23,7 @@ public:
     Coord(const Coord&&) = delete;
     Coord(size_t x, size_t y, size_t z);
 
-    std::tuple<size_t, size_t, size_t> get_coord() const;
+    std::tuple<size_t, size_t, size_t> get_tuple() const;
     size_t get_x() const;
     size_t get_y() const;
     size_t get_z() const;

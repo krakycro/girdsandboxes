@@ -8,7 +8,7 @@ namespace Container
 Coord::Coord(): x(0), y(0), z(0){};
 Coord::Coord(size_t x, size_t y, size_t z): x(x), y(y), z(z){};
 
-std::tuple<size_t, size_t, size_t> Coord::get_coord() const
+std::tuple<size_t, size_t, size_t> Coord::get_tuple() const
 {
     return {x, y, z};
 }

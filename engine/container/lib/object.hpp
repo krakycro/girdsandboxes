@@ -12,10 +12,12 @@ namespace Container
 {
 
 class Box;
+class Grid;
 
 class Object
 {
     friend Box;
+    friend Grid;
 
 private:
     container_ptr<Box> root;
@@ -25,7 +27,7 @@ private:
 
     static size_t oid;
     static std::unordered_map<size_t, container_ptr<Object>> olist;
-    // static container_ptr<Object> null;
+    static container_ptr<Object> null;
 
 public:
     int val;
@@ -38,12 +40,12 @@ public:
 
     const Coord* get_coord() const;
     const container_ptr<Box>& get_root() const;
-    const container_ptr<Object>& get_self() const;
+    const container_ptr<Object>& get_self();
     const size_t get_key() const;
 
 private:
-    void set_root(const container_ptr<Box>& root_obj);
-    void set_self(const container_ptr<Object>& self_obj);
+    void set_root(container_ptr<Box>* root_obj);
+    void set_self(container_ptr<Object>& self_obj);
     void set_key(size_t new_key);
 
 };
