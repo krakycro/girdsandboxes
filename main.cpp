@@ -28,9 +28,9 @@ int main()
 
     std::cout << GRID->at(1,1,0) << "|" << b1 << " " << GRID->at(1,0,0) << "|" << b2 << std::endl;
 
-    //Container::Grid::swap(GRID->at(1,1,0), GRID->at(1,0,0));
     Container::Grid::swap(b1, b2);
     (b1)->insert(o2);
+    //(b2)->insert(o1);
 
     for(int i=0;i<GRID->get_size_x();i++)
     {

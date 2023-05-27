@@ -68,6 +68,12 @@ memory
 box.hpp
 D:/github/girdsandboxes/engine/container/src/box.hpp
 
+D:/github/girdsandboxes/engine/container/src/coord.cpp
+tuple
+-
+coord.hpp
+D:/github/girdsandboxes/engine/container/src/coord.hpp
+
 D:/github/girdsandboxes/engine/container/src/grid.cpp
 memory
 -
