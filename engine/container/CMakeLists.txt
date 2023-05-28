@@ -1,5 +1,5 @@
 
-add_library(container OBJECT
+add_library(container STATIC
             src/box.cpp 
             src/coord.cpp 
             src/grid.cpp 

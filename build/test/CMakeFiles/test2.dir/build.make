@@ -57,11 +57,11 @@ include test/CMakeFiles/test2.dir/progress.make
 # Include the compile flags for this target's objects.
 include test/CMakeFiles/test2.dir/flags.make
 
-test/CMakeFiles/test2.dir/test2.cpp.o: test/CMakeFiles/test2.dir/flags.make
-test/CMakeFiles/test2.dir/test2.cpp.o: test/CMakeFiles/test2.dir/includes_CXX.rsp
-test/CMakeFiles/test2.dir/test2.cpp.o: ../test/test2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/test2.dir/test2.cpp.o"
-	cd D:/github/girdsandboxes/build/test && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test2.dir/test2.cpp.o -c D:/github/girdsandboxes/test/test2.cpp
+test/CMakeFiles/test2.dir/test2.cpp.obj: test/CMakeFiles/test2.dir/flags.make
+test/CMakeFiles/test2.dir/test2.cpp.obj: test/CMakeFiles/test2.dir/includes_CXX.rsp
+test/CMakeFiles/test2.dir/test2.cpp.obj: ../test/test2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/test2.dir/test2.cpp.obj"
+	cd D:/github/girdsandboxes/build/test && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test2.dir/test2.cpp.obj -c D:/github/girdsandboxes/test/test2.cpp
 
 test/CMakeFiles/test2.dir/test2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test2.dir/test2.cpp.i"
@@ -73,12 +73,12 @@ test/CMakeFiles/test2.dir/test2.cpp.s: cmake_force
 
 # Object files for target test2
 test2_OBJECTS = \
-"CMakeFiles/test2.dir/test2.cpp.o"
+"CMakeFiles/test2.dir/test2.cpp.obj"
 
 # External object files for target test2
 test2_EXTERNAL_OBJECTS =
 
-test/test2.exe: test/CMakeFiles/test2.dir/test2.cpp.o
+test/test2.exe: test/CMakeFiles/test2.dir/test2.cpp.obj
 test/test2.exe: test/CMakeFiles/test2.dir/build.make
 test/test2.exe: lib/libgtest.a
 test/test2.exe: test/CMakeFiles/test2.dir/linklibs.rsp

@@ -5,6 +5,12 @@ D:/github/girdsandboxes/build/CMakeFiles/edit_cache.dir
 D:/github/girdsandboxes/build/CMakeFiles/rebuild_cache.dir
 D:/github/girdsandboxes/build/CMakeFiles/list_install_components.dir
 D:/github/girdsandboxes/build/CMakeFiles/install/strip.dir
+D:/github/girdsandboxes/build/engine/CMakeFiles/install/local.dir
+D:/github/girdsandboxes/build/engine/CMakeFiles/install.dir
+D:/github/girdsandboxes/build/engine/CMakeFiles/edit_cache.dir
+D:/github/girdsandboxes/build/engine/CMakeFiles/rebuild_cache.dir
+D:/github/girdsandboxes/build/engine/CMakeFiles/list_install_components.dir
+D:/github/girdsandboxes/build/engine/CMakeFiles/install/strip.dir
 D:/github/girdsandboxes/build/engine/container/CMakeFiles/install/local.dir
 D:/github/girdsandboxes/build/engine/container/CMakeFiles/install.dir
 D:/github/girdsandboxes/build/engine/container/CMakeFiles/edit_cache.dir
@@ -12,6 +18,13 @@ D:/github/girdsandboxes/build/engine/container/CMakeFiles/container.dir
 D:/github/girdsandboxes/build/engine/container/CMakeFiles/rebuild_cache.dir
 D:/github/girdsandboxes/build/engine/container/CMakeFiles/list_install_components.dir
 D:/github/girdsandboxes/build/engine/container/CMakeFiles/install/strip.dir
+D:/github/girdsandboxes/build/engine/world/CMakeFiles/world.dir
+D:/github/girdsandboxes/build/engine/world/CMakeFiles/install/local.dir
+D:/github/girdsandboxes/build/engine/world/CMakeFiles/install.dir
+D:/github/girdsandboxes/build/engine/world/CMakeFiles/edit_cache.dir
+D:/github/girdsandboxes/build/engine/world/CMakeFiles/rebuild_cache.dir
+D:/github/girdsandboxes/build/engine/world/CMakeFiles/list_install_components.dir
+D:/github/girdsandboxes/build/engine/world/CMakeFiles/install/strip.dir
 D:/github/girdsandboxes/build/test/CMakeFiles/install/local.dir
 D:/github/girdsandboxes/build/test/CMakeFiles/install.dir
 D:/github/girdsandboxes/build/test/CMakeFiles/edit_cache.dir

@@ -183,6 +183,19 @@ container/fast:
 .PHONY : container/fast
 
 #=============================================================================
+# Target rules for targets named world
+
+# Build rule for target.
+world: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 world
+.PHONY : world
+
+# fast build rule for target.
+world/fast:
+	$(MAKE) -f engine/world/CMakeFiles/world.dir/build.make engine/world/CMakeFiles/world.dir/build
+.PHONY : world/fast
+
+#=============================================================================
 # Target rules for targets named testContainer
 
 # Build rule for target.
@@ -260,14 +273,14 @@ gtest_main/fast:
 	$(MAKE) -f test/googletest/googletest/CMakeFiles/gtest_main.dir/build.make test/googletest/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-main.o: main.cpp.o
+main.obj: main.cpp.obj
 
-.PHONY : main.o
+.PHONY : main.obj
 
 # target to build an object file
-main.cpp.o:
-	cd d:/github/girdsandboxes/build && $(MAKE) -f CMakeFiles/GridAndBoxes.dir/build.make CMakeFiles/GridAndBoxes.dir/main.cpp.o
-.PHONY : main.cpp.o
+main.cpp.obj:
+	cd d:/github/girdsandboxes/build && $(MAKE) -f CMakeFiles/GridAndBoxes.dir/build.make CMakeFiles/GridAndBoxes.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
 main.i: main.cpp.i
 
@@ -301,13 +314,14 @@ help:
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... container"
+	@echo "... world"
 	@echo "... testContainer"
 	@echo "... test2"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... main.o"
+	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
 .PHONY : help

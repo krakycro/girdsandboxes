@@ -7,5 +7,8 @@ CMakeFiles/GridAndBoxes.dir/main.cpp.o: ../engine/container/lib/coord.hpp
 CMakeFiles/GridAndBoxes.dir/main.cpp.o: ../engine/container/lib/general.hpp
 CMakeFiles/GridAndBoxes.dir/main.cpp.o: ../engine/container/lib/grid.hpp
 CMakeFiles/GridAndBoxes.dir/main.cpp.o: ../engine/container/lib/object.hpp
+CMakeFiles/GridAndBoxes.dir/main.cpp.o: ../engine/engine.hpp
+CMakeFiles/GridAndBoxes.dir/main.cpp.o: ../engine/world/lib/item.hpp
+CMakeFiles/GridAndBoxes.dir/main.cpp.o: ../engine/world/world.hpp
 CMakeFiles/GridAndBoxes.dir/main.cpp.o: ../main.cpp
 

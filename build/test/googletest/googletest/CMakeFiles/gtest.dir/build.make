@@ -57,11 +57,11 @@ include test/googletest/googletest/CMakeFiles/gtest.dir/progress.make
 # Include the compile flags for this target's objects.
 include test/googletest/googletest/CMakeFiles/gtest.dir/flags.make
 
-test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: test/googletest/googletest/CMakeFiles/gtest.dir/flags.make
-test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: test/googletest/googletest/CMakeFiles/gtest.dir/includes_CXX.rsp
-test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: ../test/googletest/googletest/src/gtest-all.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-	cd D:/github/girdsandboxes/build/test/googletest/googletest && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c D:/github/girdsandboxes/test/googletest/googletest/src/gtest-all.cc
+test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: test/googletest/googletest/CMakeFiles/gtest.dir/flags.make
+test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: test/googletest/googletest/CMakeFiles/gtest.dir/includes_CXX.rsp
+test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: ../test/googletest/googletest/src/gtest-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
+	cd D:/github/girdsandboxes/build/test/googletest/googletest && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.obj -c D:/github/girdsandboxes/test/googletest/googletest/src/gtest-all.cc
 
 test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest.dir/src/gtest-all.cc.i"
@@ -73,12 +73,12 @@ test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.s: cmake_force
 
 # Object files for target gtest
 gtest_OBJECTS = \
-"CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+"CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
 
 # External object files for target gtest
 gtest_EXTERNAL_OBJECTS =
 
-lib/libgtest.a: test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+lib/libgtest.a: test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
 lib/libgtest.a: test/googletest/googletest/CMakeFiles/gtest.dir/build.make
 lib/libgtest.a: test/googletest/googletest/CMakeFiles/gtest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgtest.a"

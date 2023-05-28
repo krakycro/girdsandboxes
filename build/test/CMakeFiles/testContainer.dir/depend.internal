@@ -8,6 +8,9 @@ test/CMakeFiles/testContainer.dir/container.cpp.o
  ../engine/container/lib/general.hpp
  ../engine/container/lib/grid.hpp
  ../engine/container/lib/object.hpp
+ ../engine/engine.hpp
+ ../engine/world/lib/item.hpp
+ ../engine/world/world.hpp
  ../test/googletest/googletest/include/gtest/gtest-assertion-result.h
  ../test/googletest/googletest/include/gtest/gtest-death-test.h
  ../test/googletest/googletest/include/gtest/gtest-matchers.h

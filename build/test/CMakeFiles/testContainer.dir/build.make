@@ -57,11 +57,11 @@ include test/CMakeFiles/testContainer.dir/progress.make
 # Include the compile flags for this target's objects.
 include test/CMakeFiles/testContainer.dir/flags.make
 
-test/CMakeFiles/testContainer.dir/container.cpp.o: test/CMakeFiles/testContainer.dir/flags.make
-test/CMakeFiles/testContainer.dir/container.cpp.o: test/CMakeFiles/testContainer.dir/includes_CXX.rsp
-test/CMakeFiles/testContainer.dir/container.cpp.o: ../test/container.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/testContainer.dir/container.cpp.o"
-	cd D:/github/girdsandboxes/build/test && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testContainer.dir/container.cpp.o -c D:/github/girdsandboxes/test/container.cpp
+test/CMakeFiles/testContainer.dir/container.cpp.obj: test/CMakeFiles/testContainer.dir/flags.make
+test/CMakeFiles/testContainer.dir/container.cpp.obj: test/CMakeFiles/testContainer.dir/includes_CXX.rsp
+test/CMakeFiles/testContainer.dir/container.cpp.obj: ../test/container.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/testContainer.dir/container.cpp.obj"
+	cd D:/github/girdsandboxes/build/test && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testContainer.dir/container.cpp.obj -c D:/github/girdsandboxes/test/container.cpp
 
 test/CMakeFiles/testContainer.dir/container.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testContainer.dir/container.cpp.i"
@@ -73,22 +73,16 @@ test/CMakeFiles/testContainer.dir/container.cpp.s: cmake_force
 
 # Object files for target testContainer
 testContainer_OBJECTS = \
-"CMakeFiles/testContainer.dir/container.cpp.o"
+"CMakeFiles/testContainer.dir/container.cpp.obj"
 
 # External object files for target testContainer
-testContainer_EXTERNAL_OBJECTS = \
-"D:/github/girdsandboxes/build/engine/container/CMakeFiles/container.dir/src/box.cpp.o" \
-"D:/github/girdsandboxes/build/engine/container/CMakeFiles/container.dir/src/coord.cpp.o" \
-"D:/github/girdsandboxes/build/engine/container/CMakeFiles/container.dir/src/grid.cpp.o" \
-"D:/github/girdsandboxes/build/engine/container/CMakeFiles/container.dir/src/object.cpp.o"
+testContainer_EXTERNAL_OBJECTS =
 
-test/testContainer.exe: test/CMakeFiles/testContainer.dir/container.cpp.o
-test/testContainer.exe: engine/container/CMakeFiles/container.dir/src/box.cpp.o
-test/testContainer.exe: engine/container/CMakeFiles/container.dir/src/coord.cpp.o
-test/testContainer.exe: engine/container/CMakeFiles/container.dir/src/grid.cpp.o
-test/testContainer.exe: engine/container/CMakeFiles/container.dir/src/object.cpp.o
+test/testContainer.exe: test/CMakeFiles/testContainer.dir/container.cpp.obj
 test/testContainer.exe: test/CMakeFiles/testContainer.dir/build.make
 test/testContainer.exe: lib/libgtest.a
+test/testContainer.exe: engine/container/libcontainer.a
+test/testContainer.exe: engine/world/libworld.a
 test/testContainer.exe: test/CMakeFiles/testContainer.dir/linklibs.rsp
 test/testContainer.exe: test/CMakeFiles/testContainer.dir/objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable testContainer.exe"

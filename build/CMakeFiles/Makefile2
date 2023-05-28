@@ -69,6 +69,7 @@ CMAKE_BINARY_DIR = D:/github/girdsandboxes/build
 
 # All Build rule for target.
 CMakeFiles/GridAndBoxes.dir/all: engine/container/CMakeFiles/container.dir/all
+CMakeFiles/GridAndBoxes.dir/all: engine/world/CMakeFiles/world.dir/all
 	$(MAKE) -f CMakeFiles/GridAndBoxes.dir/build.make CMakeFiles/GridAndBoxes.dir/depend
 	$(MAKE) -f CMakeFiles/GridAndBoxes.dir/build.make CMakeFiles/GridAndBoxes.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=1,2 "Built target GridAndBoxes"
@@ -81,7 +82,7 @@ all: CMakeFiles/GridAndBoxes.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GridAndBoxes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/GridAndBoxes.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 0
 .PHONY : CMakeFiles/GridAndBoxes.dir/rule
@@ -100,6 +101,27 @@ CMakeFiles/GridAndBoxes.dir/clean:
 clean: CMakeFiles/GridAndBoxes.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory engine
+
+# Convenience name for "all" pass in the directory.
+engine/all: engine/container/all
+engine/all: engine/world/all
+
+.PHONY : engine/all
+
+# Convenience name for "clean" pass in the directory.
+engine/clean: engine/container/clean
+engine/clean: engine/world/clean
+
+.PHONY : engine/clean
+
+# Convenience name for "preinstall" pass in the directory.
+engine/preinstall: engine/container/preinstall
+engine/preinstall: engine/world/preinstall
+
+.PHONY : engine/preinstall
 
 #=============================================================================
 # Directory level rules for directory engine/container
@@ -126,7 +148,7 @@ engine/container/preinstall:
 engine/container/CMakeFiles/container.dir/all:
 	$(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/depend
 	$(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=3,4,5,6 "Built target container"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=3,4,5,6,7 "Built target container"
 .PHONY : engine/container/CMakeFiles/container.dir/all
 
 # Include target in all.
@@ -136,7 +158,7 @@ all: engine/container/CMakeFiles/container.dir/all
 
 # Build rule for subdir invocation for target.
 engine/container/CMakeFiles/container.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 engine/container/CMakeFiles/container.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 0
 .PHONY : engine/container/CMakeFiles/container.dir/rule
@@ -153,6 +175,61 @@ engine/container/CMakeFiles/container.dir/clean:
 
 # clean rule for target.
 clean: engine/container/CMakeFiles/container.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory engine/world
+
+# Convenience name for "all" pass in the directory.
+engine/world/all: engine/world/CMakeFiles/world.dir/all
+
+.PHONY : engine/world/all
+
+# Convenience name for "clean" pass in the directory.
+engine/world/clean: engine/world/CMakeFiles/world.dir/clean
+
+.PHONY : engine/world/clean
+
+# Convenience name for "preinstall" pass in the directory.
+engine/world/preinstall:
+
+.PHONY : engine/world/preinstall
+
+#=============================================================================
+# Target rules for target engine/world/CMakeFiles/world.dir
+
+# All Build rule for target.
+engine/world/CMakeFiles/world.dir/all:
+	$(MAKE) -f engine/world/CMakeFiles/world.dir/build.make engine/world/CMakeFiles/world.dir/depend
+	$(MAKE) -f engine/world/CMakeFiles/world.dir/build.make engine/world/CMakeFiles/world.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=20,21 "Built target world"
+.PHONY : engine/world/CMakeFiles/world.dir/all
+
+# Include target in all.
+all: engine/world/CMakeFiles/world.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+engine/world/CMakeFiles/world.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 engine/world/CMakeFiles/world.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 0
+.PHONY : engine/world/CMakeFiles/world.dir/rule
+
+# Convenience name for target.
+world: engine/world/CMakeFiles/world.dir/rule
+
+.PHONY : world
+
+# clean rule for target.
+engine/world/CMakeFiles/world.dir/clean:
+	$(MAKE) -f engine/world/CMakeFiles/world.dir/build.make engine/world/CMakeFiles/world.dir/clean
+.PHONY : engine/world/CMakeFiles/world.dir/clean
+
+# clean rule for target.
+clean: engine/world/CMakeFiles/world.dir/clean
 
 .PHONY : clean
 
@@ -182,11 +259,12 @@ test/preinstall: test/googletest/preinstall
 # Target rules for target test/CMakeFiles/testContainer.dir
 
 # All Build rule for target.
-test/CMakeFiles/testContainer.dir/all: engine/container/CMakeFiles/container.dir/all
 test/CMakeFiles/testContainer.dir/all: test/googletest/googletest/CMakeFiles/gtest.dir/all
+test/CMakeFiles/testContainer.dir/all: engine/container/CMakeFiles/container.dir/all
+test/CMakeFiles/testContainer.dir/all: engine/world/CMakeFiles/world.dir/all
 	$(MAKE) -f test/CMakeFiles/testContainer.dir/build.make test/CMakeFiles/testContainer.dir/depend
 	$(MAKE) -f test/CMakeFiles/testContainer.dir/build.make test/CMakeFiles/testContainer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=17,18 "Built target testContainer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=18,19 "Built target testContainer"
 .PHONY : test/CMakeFiles/testContainer.dir/all
 
 # Include target in all.
@@ -196,7 +274,7 @@ all: test/CMakeFiles/testContainer.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/testContainer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/testContainer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:/github/girdsandboxes/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/testContainer.dir/rule
@@ -223,7 +301,7 @@ clean: test/CMakeFiles/testContainer.dir/clean
 test/CMakeFiles/test2.dir/all: test/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f test/CMakeFiles/test2.dir/build.make test/CMakeFiles/test2.dir/depend
 	$(MAKE) -f test/CMakeFiles/test2.dir/build.make test/CMakeFiles/test2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=15,16 "Built target test2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=16,17 "Built target test2"
 .PHONY : test/CMakeFiles/test2.dir/all
 
 # Include target in all.
@@ -297,11 +375,11 @@ test/googletest/googlemock/preinstall: test/googletest/googletest/preinstall
 # Target rules for target test/googletest/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-test/googletest/googlemock/CMakeFiles/gmock_main.dir/all: test/googletest/googletest/CMakeFiles/gtest.dir/all
 test/googletest/googlemock/CMakeFiles/gmock_main.dir/all: test/googletest/googlemock/CMakeFiles/gmock.dir/all
+test/googletest/googlemock/CMakeFiles/gmock_main.dir/all: test/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f test/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make test/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f test/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make test/googletest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=9,10 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=10,11 "Built target gmock_main"
 .PHONY : test/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Include target in all.
@@ -338,7 +416,7 @@ clean: test/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
 test/googletest/googlemock/CMakeFiles/gmock.dir/all: test/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f test/googletest/googlemock/CMakeFiles/gmock.dir/build.make test/googletest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f test/googletest/googlemock/CMakeFiles/gmock.dir/build.make test/googletest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=7,8 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=8,9 "Built target gmock"
 .PHONY : test/googletest/googlemock/CMakeFiles/gmock.dir/all
 
 # Include target in all.
@@ -395,7 +473,7 @@ test/googletest/googletest/preinstall:
 test/googletest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f test/googletest/googletest/CMakeFiles/gtest.dir/build.make test/googletest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f test/googletest/googletest/CMakeFiles/gtest.dir/build.make test/googletest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=11,12 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=12,13 "Built target gtest"
 .PHONY : test/googletest/googletest/CMakeFiles/gtest.dir/all
 
 # Include target in all.
@@ -432,7 +510,7 @@ clean: test/googletest/googletest/CMakeFiles/gtest.dir/clean
 test/googletest/googletest/CMakeFiles/gtest_main.dir/all: test/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f test/googletest/googletest/CMakeFiles/gtest_main.dir/build.make test/googletest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f test/googletest/googletest/CMakeFiles/gtest_main.dir/build.make test/googletest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=13,14 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=14,15 "Built target gtest_main"
 .PHONY : test/googletest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.

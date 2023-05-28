@@ -8,4 +8,7 @@ CMakeFiles/GridAndBoxes.dir/main.cpp.o
  ../engine/container/lib/general.hpp
  ../engine/container/lib/grid.hpp
  ../engine/container/lib/object.hpp
+ ../engine/engine.hpp
+ ../engine/world/lib/item.hpp
+ ../engine/world/world.hpp
  D:/github/girdsandboxes/main.cpp

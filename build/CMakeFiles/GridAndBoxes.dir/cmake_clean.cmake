@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GridAndBoxes.dir/main.cpp.o"
+  "CMakeFiles/GridAndBoxes.dir/main.cpp.obj"
   "GridAndBoxes.pdb"
   "GridAndBoxes.exe"
   "GridAndBoxes.exe.manifest"

@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/container.dir/src/box.cpp.o"
-  "CMakeFiles/container.dir/src/coord.cpp.o"
-  "CMakeFiles/container.dir/src/grid.cpp.o"
-  "CMakeFiles/container.dir/src/object.cpp.o"
+  "CMakeFiles/container.dir/src/box.cpp.obj"
+  "CMakeFiles/container.dir/src/coord.cpp.obj"
+  "CMakeFiles/container.dir/src/grid.cpp.obj"
+  "CMakeFiles/container.dir/src/object.cpp.obj"
+  "libcontainer.pdb"
+  "libcontainer.a"
 )
 
 # Per-language clean rules from dependency scanning.

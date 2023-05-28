@@ -57,11 +57,11 @@ include test/googletest/googlemock/CMakeFiles/gmock.dir/progress.make
 # Include the compile flags for this target's objects.
 include test/googletest/googlemock/CMakeFiles/gmock.dir/flags.make
 
-test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: test/googletest/googlemock/CMakeFiles/gmock.dir/flags.make
-test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: test/googletest/googlemock/CMakeFiles/gmock.dir/includes_CXX.rsp
-test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: ../test/googletest/googlemock/src/gmock-all.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
-	cd D:/github/girdsandboxes/build/test/googletest/googlemock && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c D:/github/girdsandboxes/test/googletest/googlemock/src/gmock-all.cc
+test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: test/googletest/googlemock/CMakeFiles/gmock.dir/flags.make
+test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: test/googletest/googlemock/CMakeFiles/gmock.dir/includes_CXX.rsp
+test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: ../test/googletest/googlemock/src/gmock-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
+	cd D:/github/girdsandboxes/build/test/googletest/googlemock && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/src/gmock-all.cc.obj -c D:/github/girdsandboxes/test/googletest/googlemock/src/gmock-all.cc
 
 test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock.dir/src/gmock-all.cc.i"
@@ -73,12 +73,12 @@ test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.s: cmake_force
 
 # Object files for target gmock
 gmock_OBJECTS = \
-"CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+"CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
 
 # External object files for target gmock
 gmock_EXTERNAL_OBJECTS =
 
-lib/libgmock.a: test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+lib/libgmock.a: test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj
 lib/libgmock.a: test/googletest/googlemock/CMakeFiles/gmock.dir/build.make
 lib/libgmock.a: test/googletest/googlemock/CMakeFiles/gmock.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmock.a"

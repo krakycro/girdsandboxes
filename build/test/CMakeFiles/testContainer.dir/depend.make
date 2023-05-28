@@ -7,6 +7,9 @@ test/CMakeFiles/testContainer.dir/container.cpp.o: ../engine/container/lib/coord
 test/CMakeFiles/testContainer.dir/container.cpp.o: ../engine/container/lib/general.hpp
 test/CMakeFiles/testContainer.dir/container.cpp.o: ../engine/container/lib/grid.hpp
 test/CMakeFiles/testContainer.dir/container.cpp.o: ../engine/container/lib/object.hpp
+test/CMakeFiles/testContainer.dir/container.cpp.o: ../engine/engine.hpp
+test/CMakeFiles/testContainer.dir/container.cpp.o: ../engine/world/lib/item.hpp
+test/CMakeFiles/testContainer.dir/container.cpp.o: ../engine/world/world.hpp
 test/CMakeFiles/testContainer.dir/container.cpp.o: ../test/googletest/googletest/include/gtest/gtest-assertion-result.h
 test/CMakeFiles/testContainer.dir/container.cpp.o: ../test/googletest/googletest/include/gtest/gtest-death-test.h
 test/CMakeFiles/testContainer.dir/container.cpp.o: ../test/googletest/googletest/include/gtest/gtest-matchers.h

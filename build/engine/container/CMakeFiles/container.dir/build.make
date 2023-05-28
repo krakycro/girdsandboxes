@@ -57,11 +57,11 @@ include engine/container/CMakeFiles/container.dir/progress.make
 # Include the compile flags for this target's objects.
 include engine/container/CMakeFiles/container.dir/flags.make
 
-engine/container/CMakeFiles/container.dir/src/box.cpp.o: engine/container/CMakeFiles/container.dir/flags.make
-engine/container/CMakeFiles/container.dir/src/box.cpp.o: engine/container/CMakeFiles/container.dir/includes_CXX.rsp
-engine/container/CMakeFiles/container.dir/src/box.cpp.o: ../engine/container/src/box.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object engine/container/CMakeFiles/container.dir/src/box.cpp.o"
-	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/src/box.cpp.o -c D:/github/girdsandboxes/engine/container/src/box.cpp
+engine/container/CMakeFiles/container.dir/src/box.cpp.obj: engine/container/CMakeFiles/container.dir/flags.make
+engine/container/CMakeFiles/container.dir/src/box.cpp.obj: engine/container/CMakeFiles/container.dir/includes_CXX.rsp
+engine/container/CMakeFiles/container.dir/src/box.cpp.obj: ../engine/container/src/box.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object engine/container/CMakeFiles/container.dir/src/box.cpp.obj"
+	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/src/box.cpp.obj -c D:/github/girdsandboxes/engine/container/src/box.cpp
 
 engine/container/CMakeFiles/container.dir/src/box.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/container.dir/src/box.cpp.i"
@@ -71,11 +71,11 @@ engine/container/CMakeFiles/container.dir/src/box.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/container.dir/src/box.cpp.s"
 	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/github/girdsandboxes/engine/container/src/box.cpp -o CMakeFiles/container.dir/src/box.cpp.s
 
-engine/container/CMakeFiles/container.dir/src/coord.cpp.o: engine/container/CMakeFiles/container.dir/flags.make
-engine/container/CMakeFiles/container.dir/src/coord.cpp.o: engine/container/CMakeFiles/container.dir/includes_CXX.rsp
-engine/container/CMakeFiles/container.dir/src/coord.cpp.o: ../engine/container/src/coord.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object engine/container/CMakeFiles/container.dir/src/coord.cpp.o"
-	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/src/coord.cpp.o -c D:/github/girdsandboxes/engine/container/src/coord.cpp
+engine/container/CMakeFiles/container.dir/src/coord.cpp.obj: engine/container/CMakeFiles/container.dir/flags.make
+engine/container/CMakeFiles/container.dir/src/coord.cpp.obj: engine/container/CMakeFiles/container.dir/includes_CXX.rsp
+engine/container/CMakeFiles/container.dir/src/coord.cpp.obj: ../engine/container/src/coord.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object engine/container/CMakeFiles/container.dir/src/coord.cpp.obj"
+	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/src/coord.cpp.obj -c D:/github/girdsandboxes/engine/container/src/coord.cpp
 
 engine/container/CMakeFiles/container.dir/src/coord.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/container.dir/src/coord.cpp.i"
@@ -85,11 +85,11 @@ engine/container/CMakeFiles/container.dir/src/coord.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/container.dir/src/coord.cpp.s"
 	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/github/girdsandboxes/engine/container/src/coord.cpp -o CMakeFiles/container.dir/src/coord.cpp.s
 
-engine/container/CMakeFiles/container.dir/src/grid.cpp.o: engine/container/CMakeFiles/container.dir/flags.make
-engine/container/CMakeFiles/container.dir/src/grid.cpp.o: engine/container/CMakeFiles/container.dir/includes_CXX.rsp
-engine/container/CMakeFiles/container.dir/src/grid.cpp.o: ../engine/container/src/grid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object engine/container/CMakeFiles/container.dir/src/grid.cpp.o"
-	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/src/grid.cpp.o -c D:/github/girdsandboxes/engine/container/src/grid.cpp
+engine/container/CMakeFiles/container.dir/src/grid.cpp.obj: engine/container/CMakeFiles/container.dir/flags.make
+engine/container/CMakeFiles/container.dir/src/grid.cpp.obj: engine/container/CMakeFiles/container.dir/includes_CXX.rsp
+engine/container/CMakeFiles/container.dir/src/grid.cpp.obj: ../engine/container/src/grid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object engine/container/CMakeFiles/container.dir/src/grid.cpp.obj"
+	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/src/grid.cpp.obj -c D:/github/girdsandboxes/engine/container/src/grid.cpp
 
 engine/container/CMakeFiles/container.dir/src/grid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/container.dir/src/grid.cpp.i"
@@ -99,11 +99,11 @@ engine/container/CMakeFiles/container.dir/src/grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/container.dir/src/grid.cpp.s"
 	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/github/girdsandboxes/engine/container/src/grid.cpp -o CMakeFiles/container.dir/src/grid.cpp.s
 
-engine/container/CMakeFiles/container.dir/src/object.cpp.o: engine/container/CMakeFiles/container.dir/flags.make
-engine/container/CMakeFiles/container.dir/src/object.cpp.o: engine/container/CMakeFiles/container.dir/includes_CXX.rsp
-engine/container/CMakeFiles/container.dir/src/object.cpp.o: ../engine/container/src/object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object engine/container/CMakeFiles/container.dir/src/object.cpp.o"
-	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/src/object.cpp.o -c D:/github/girdsandboxes/engine/container/src/object.cpp
+engine/container/CMakeFiles/container.dir/src/object.cpp.obj: engine/container/CMakeFiles/container.dir/flags.make
+engine/container/CMakeFiles/container.dir/src/object.cpp.obj: engine/container/CMakeFiles/container.dir/includes_CXX.rsp
+engine/container/CMakeFiles/container.dir/src/object.cpp.obj: ../engine/container/src/object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object engine/container/CMakeFiles/container.dir/src/object.cpp.obj"
+	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/src/object.cpp.obj -c D:/github/girdsandboxes/engine/container/src/object.cpp
 
 engine/container/CMakeFiles/container.dir/src/object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/container.dir/src/object.cpp.i"
@@ -113,16 +113,28 @@ engine/container/CMakeFiles/container.dir/src/object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/container.dir/src/object.cpp.s"
 	cd D:/github/girdsandboxes/build/engine/container && C:/msys64/usr/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:/github/girdsandboxes/engine/container/src/object.cpp -o CMakeFiles/container.dir/src/object.cpp.s
 
-container: engine/container/CMakeFiles/container.dir/src/box.cpp.o
-container: engine/container/CMakeFiles/container.dir/src/coord.cpp.o
-container: engine/container/CMakeFiles/container.dir/src/grid.cpp.o
-container: engine/container/CMakeFiles/container.dir/src/object.cpp.o
-container: engine/container/CMakeFiles/container.dir/build.make
+# Object files for target container
+container_OBJECTS = \
+"CMakeFiles/container.dir/src/box.cpp.obj" \
+"CMakeFiles/container.dir/src/coord.cpp.obj" \
+"CMakeFiles/container.dir/src/grid.cpp.obj" \
+"CMakeFiles/container.dir/src/object.cpp.obj"
 
-.PHONY : container
+# External object files for target container
+container_EXTERNAL_OBJECTS =
+
+engine/container/libcontainer.a: engine/container/CMakeFiles/container.dir/src/box.cpp.obj
+engine/container/libcontainer.a: engine/container/CMakeFiles/container.dir/src/coord.cpp.obj
+engine/container/libcontainer.a: engine/container/CMakeFiles/container.dir/src/grid.cpp.obj
+engine/container/libcontainer.a: engine/container/CMakeFiles/container.dir/src/object.cpp.obj
+engine/container/libcontainer.a: engine/container/CMakeFiles/container.dir/build.make
+engine/container/libcontainer.a: engine/container/CMakeFiles/container.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:/github/girdsandboxes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libcontainer.a"
+	cd D:/github/girdsandboxes/build/engine/container && $(CMAKE_COMMAND) -P CMakeFiles/container.dir/cmake_clean_target.cmake
+	cd D:/github/girdsandboxes/build/engine/container && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/container.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-engine/container/CMakeFiles/container.dir/build: container
+engine/container/CMakeFiles/container.dir/build: engine/container/libcontainer.a
 
 .PHONY : engine/container/CMakeFiles/container.dir/build
 

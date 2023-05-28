@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/github/girdsandboxes/test/googletest/googlemock/src/gmock-all.cc" "D:/github/girdsandboxes/build/test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+  "D:/github/girdsandboxes/test/googletest/googlemock/src/gmock-all.cc" "D:/github/girdsandboxes/build/test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

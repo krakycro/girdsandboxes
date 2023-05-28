@@ -171,14 +171,14 @@ container/fast:
 	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/build
 .PHONY : container/fast
 
-src/box.o: src/box.cpp.o
+src/box.obj: src/box.cpp.obj
 
-.PHONY : src/box.o
+.PHONY : src/box.obj
 
 # target to build an object file
-src/box.cpp.o:
-	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/box.cpp.o
-.PHONY : src/box.cpp.o
+src/box.cpp.obj:
+	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/box.cpp.obj
+.PHONY : src/box.cpp.obj
 
 src/box.i: src/box.cpp.i
 
@@ -198,14 +198,14 @@ src/box.cpp.s:
 	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/box.cpp.s
 .PHONY : src/box.cpp.s
 
-src/coord.o: src/coord.cpp.o
+src/coord.obj: src/coord.cpp.obj
 
-.PHONY : src/coord.o
+.PHONY : src/coord.obj
 
 # target to build an object file
-src/coord.cpp.o:
-	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/coord.cpp.o
-.PHONY : src/coord.cpp.o
+src/coord.cpp.obj:
+	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/coord.cpp.obj
+.PHONY : src/coord.cpp.obj
 
 src/coord.i: src/coord.cpp.i
 
@@ -225,14 +225,14 @@ src/coord.cpp.s:
 	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/coord.cpp.s
 .PHONY : src/coord.cpp.s
 
-src/grid.o: src/grid.cpp.o
+src/grid.obj: src/grid.cpp.obj
 
-.PHONY : src/grid.o
+.PHONY : src/grid.obj
 
 # target to build an object file
-src/grid.cpp.o:
-	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/grid.cpp.o
-.PHONY : src/grid.cpp.o
+src/grid.cpp.obj:
+	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/grid.cpp.obj
+.PHONY : src/grid.cpp.obj
 
 src/grid.i: src/grid.cpp.i
 
@@ -252,14 +252,14 @@ src/grid.cpp.s:
 	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/grid.cpp.s
 .PHONY : src/grid.cpp.s
 
-src/object.o: src/object.cpp.o
+src/object.obj: src/object.cpp.obj
 
-.PHONY : src/object.o
+.PHONY : src/object.obj
 
 # target to build an object file
-src/object.cpp.o:
-	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/object.cpp.o
-.PHONY : src/object.cpp.o
+src/object.cpp.obj:
+	cd d:/github/girdsandboxes/build && $(MAKE) -f engine/container/CMakeFiles/container.dir/build.make engine/container/CMakeFiles/container.dir/src/object.cpp.obj
+.PHONY : src/object.cpp.obj
 
 src/object.i: src/object.cpp.i
 
@@ -292,16 +292,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... install/strip"
-	@echo "... src/box.o"
+	@echo "... src/box.obj"
 	@echo "... src/box.i"
 	@echo "... src/box.s"
-	@echo "... src/coord.o"
+	@echo "... src/coord.obj"
 	@echo "... src/coord.i"
 	@echo "... src/coord.s"
-	@echo "... src/grid.o"
+	@echo "... src/grid.obj"
 	@echo "... src/grid.i"
 	@echo "... src/grid.s"
-	@echo "... src/object.o"
+	@echo "... src/object.obj"
 	@echo "... src/object.i"
 	@echo "... src/object.s"
 .PHONY : help

@@ -1,0 +1,2 @@
+C:/msys64/usr/bin/ar.exe qc libworld.a  CMakeFiles/world.dir/src/item.cpp.obj
+C:/msys64/usr/bin/ranlib.exe libworld.a

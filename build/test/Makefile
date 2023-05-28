@@ -186,14 +186,14 @@ test2/fast:
 	cd d:/github/girdsandboxes/build && $(MAKE) -f test/CMakeFiles/test2.dir/build.make test/CMakeFiles/test2.dir/build
 .PHONY : test2/fast
 
-container.o: container.cpp.o
+container.obj: container.cpp.obj
 
-.PHONY : container.o
+.PHONY : container.obj
 
 # target to build an object file
-container.cpp.o:
-	cd d:/github/girdsandboxes/build && $(MAKE) -f test/CMakeFiles/testContainer.dir/build.make test/CMakeFiles/testContainer.dir/container.cpp.o
-.PHONY : container.cpp.o
+container.cpp.obj:
+	cd d:/github/girdsandboxes/build && $(MAKE) -f test/CMakeFiles/testContainer.dir/build.make test/CMakeFiles/testContainer.dir/container.cpp.obj
+.PHONY : container.cpp.obj
 
 container.i: container.cpp.i
 
@@ -213,14 +213,14 @@ container.cpp.s:
 	cd d:/github/girdsandboxes/build && $(MAKE) -f test/CMakeFiles/testContainer.dir/build.make test/CMakeFiles/testContainer.dir/container.cpp.s
 .PHONY : container.cpp.s
 
-test2.o: test2.cpp.o
+test2.obj: test2.cpp.obj
 
-.PHONY : test2.o
+.PHONY : test2.obj
 
 # target to build an object file
-test2.cpp.o:
-	cd d:/github/girdsandboxes/build && $(MAKE) -f test/CMakeFiles/test2.dir/build.make test/CMakeFiles/test2.dir/test2.cpp.o
-.PHONY : test2.cpp.o
+test2.cpp.obj:
+	cd d:/github/girdsandboxes/build && $(MAKE) -f test/CMakeFiles/test2.dir/build.make test/CMakeFiles/test2.dir/test2.cpp.obj
+.PHONY : test2.cpp.obj
 
 test2.i: test2.cpp.i
 
@@ -254,10 +254,10 @@ help:
 	@echo "... test2"
 	@echo "... list_install_components"
 	@echo "... install/strip"
-	@echo "... container.o"
+	@echo "... container.obj"
 	@echo "... container.i"
 	@echo "... container.s"
-	@echo "... test2.o"
+	@echo "... test2.obj"
 	@echo "... test2.i"
 	@echo "... test2.s"
 .PHONY : help
