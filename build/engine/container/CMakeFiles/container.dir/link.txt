@@ -1,2 +1,0 @@
-C:/msys64/usr/bin/ar.exe qc libcontainer.a  CMakeFiles/container.dir/src/box.cpp.obj CMakeFiles/container.dir/src/coord.cpp.obj CMakeFiles/container.dir/src/grid.cpp.obj CMakeFiles/container.dir/src/object.cpp.obj
-C:/msys64/usr/bin/ranlib.exe libcontainer.a

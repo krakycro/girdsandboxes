@@ -1,12 +1,11 @@
-#include "item.hpp"
+#include "space.hpp"
 
 namespace World
 {
 
-Item::Item()
+Space::Space()
 {
     
 }
-
 
 }; // World
