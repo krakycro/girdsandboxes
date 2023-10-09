@@ -66,7 +66,8 @@
         "numbers": "cpp",
         "semaphore": "cpp",
         "stop_token": "cpp",
-        "cinttypes": "cpp"
+        "cinttypes": "cpp",
+        "span": "cpp"
     },
     "cmake.configureSettings": {
         "gtest_build_samples": "OFF"

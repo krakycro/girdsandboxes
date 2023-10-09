@@ -6,19 +6,19 @@
 namespace World
 {
 
-class Object;
+    class Object;
 
-class Item: private Container::Object
-{
+    class Item: private Container::Object
+    {
 
-private:
+        private:
 
-public:
-    Item();
-    Item(const Item& o) = delete;
-    Item(const Item&&) = delete;
+        public:
+            Item();
+            Item(const Item& o) = delete;
+            Item(const Item&&) = delete;
 
-};
+    };
 
 }; // World
 

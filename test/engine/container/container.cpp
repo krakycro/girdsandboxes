@@ -2,28 +2,28 @@
 #include <iostream>
 #include <memory>
 
-#include <container.hpp>
+#include <container/container.hpp>
 
 std::unique_ptr<Container::Grid> GRID;
 
-TEST(Container, ObjectNull)
+TEST(testContainer, ObjectNull)
 {
-   // Container::Object::null = std::make_shared<Container::Object>();
+   
 }
 
-TEST(Container, BoxNull)
+TEST(testContainer, BoxNull)
 {
 
 }
 
-TEST(Container, Create)
+TEST(testContainer, Create)
 {
    ASSERT_NO_THROW({
       GRID = std::unique_ptr<Container::Grid>(new Container::Grid(2, 2, 2));
    });
 }
 
-TEST(Container, Populate)
+TEST(testContainer, Populate)
 {
    ASSERT_NO_THROW({
       for(int i=0;i<GRID->get_size_x();i++)
@@ -45,7 +45,7 @@ TEST(Container, Populate)
    });
 }
 
-TEST(Container, CheckInsert)
+TEST(testContainer, CheckInsert)
 {
    for(int i=0;i<GRID->get_size_x();i++)
    {
@@ -66,7 +66,7 @@ TEST(Container, CheckInsert)
    }
 }
 
-TEST(Container, CheckCoord)
+TEST(testContainer, CheckCoord)
 {
    std::cout << "Operation" << std::endl;
    auto b1 = GRID->at(1,1,0);
@@ -85,7 +85,7 @@ TEST(Container, CheckCoord)
    EXPECT_TRUE(c2->get_z() == 1);
 }
 
-TEST(Container, CheckRoot)
+TEST(testContainer, CheckRoot)
 {
    std::cout << "Operation" << std::endl;
    auto b1 = GRID->at(1,1,0);
@@ -100,7 +100,7 @@ TEST(Container, CheckRoot)
    EXPECT_TRUE(o2->get_self() == o2);
 }
 
-TEST(Container, SwapGridFail)
+TEST(testContainer, SwapGridFail)
 {
    auto b1 = GRID->at(1,1,0);
    auto b2 = GRID->at(1,1,1);
@@ -124,7 +124,7 @@ TEST(Container, SwapGridFail)
    ASSERT_TRUE((GRID->at(1,1,1,1))->val == 6);
 }
 
-TEST(Container, SwapGrid)
+TEST(testContainer, SwapGrid)
 {
    auto b1 = GRID->at(1,1,0);
    auto b2 = GRID->at(1,1,1);
@@ -133,7 +133,7 @@ TEST(Container, SwapGrid)
    });
 }
 
-TEST(Container, CheckGridSwaped)
+TEST(testContainer, CheckGridSwaped)
 {
    std::cout << "Checking val" << std::endl;
    EXPECT_TRUE((GRID->at(1,1,0,0))->val == 3);
@@ -150,7 +150,7 @@ TEST(Container, CheckGridSwaped)
    EXPECT_TRUE((GRID->at(1,1,1))->get_z() == 1);
 }
 
-TEST(Container, CheckGridSwapedCoord)
+TEST(testContainer, CheckGridSwapedCoord)
 {
    std::cout << "Operation" << std::endl;
    auto b1 = GRID->at(1,1,0);
@@ -169,7 +169,7 @@ TEST(Container, CheckGridSwapedCoord)
    EXPECT_TRUE(c2->get_z() == 1);
 }
 
-TEST(Container, CheckGridSwapedRoot)
+TEST(testContainer, CheckGridSwapedRoot)
 {
    std::cout << "Operation" << std::endl;
    auto b1 = GRID->at(1,1,0);
@@ -184,7 +184,7 @@ TEST(Container, CheckGridSwapedRoot)
    EXPECT_TRUE(o2->get_self() == o2);
 }
 
-TEST(Container, Move)
+TEST(testContainer, Move)
 {
    std::cout << "Operation" << std::endl;
    auto b1 = GRID->at(1,1,0);
@@ -218,7 +218,7 @@ TEST(Container, Move)
    EXPECT_TRUE(o3 == nullptr);
 }
 
-TEST(Container, GetKey)
+TEST(testContainer, GetKey)
 {
    std::cout << "Operation" << std::endl;
    auto b = GRID->at(1,1,0);
@@ -231,7 +231,7 @@ TEST(Container, GetKey)
    ASSERT_DEATH(b->get((o2)->get_key()), "");
 }
 
-TEST(Container, MoveBack)
+TEST(testContainer, MoveBack)
 {
    std::cout << "Operation" << std::endl;
    auto b1 = GRID->at(1,1,0);
@@ -261,7 +261,7 @@ TEST(Container, MoveBack)
    EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
 }
 
-TEST(Container, SwapBoxFail)
+TEST(testContainer, SwapBoxFail)
 {
    auto b1 = GRID->at(1,1,0);
    auto b2 = GRID->at(1,1,1);
@@ -292,7 +292,7 @@ TEST(Container, SwapBoxFail)
    EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
 }
 
-TEST(Container, SwapBox)
+TEST(testContainer, SwapBox)
 {
    auto b1 = GRID->at(1,1,0);
    auto b2 = GRID->at(1,1,1);
@@ -308,7 +308,7 @@ TEST(Container, SwapBox)
    EXPECT_TRUE(b2->get_obj_size() == 3);
 }
 
-TEST(Container, CheckBoxSwaped)
+TEST(testContainer, CheckBoxSwaped)
 {
    std::cout << "Checking val" << std::endl;
    EXPECT_TRUE((GRID->at(1,1,0,0))->val == 2);
@@ -327,7 +327,7 @@ TEST(Container, CheckBoxSwaped)
    EXPECT_TRUE((GRID->at(1,1,1))->get_z() == 1);
 }
 
-TEST(Container, CheckBoxSwapedCoord)
+TEST(testContainer, CheckBoxSwapedCoord)
 {
    std::cout << "Operation" << std::endl;
    auto b1 = GRID->at(1,1,0);
@@ -346,7 +346,7 @@ TEST(Container, CheckBoxSwapedCoord)
    EXPECT_TRUE(c2->get_z() == 1);
 }
 
-TEST(Container, CheckBoxSwapedRoot)
+TEST(testContainer, CheckBoxSwapedRoot)
 {
    std::cout << "Operation" << std::endl;
    auto b1 = GRID->at(1,1,0);
@@ -361,8 +361,8 @@ TEST(Container, CheckBoxSwapedRoot)
    EXPECT_TRUE(o2->get_self() == o2);
 }
 
-int main(int argc, char **argv)
-{
-  ::testing::InitGoogleTest(&argc, argv);
-   return RUN_ALL_TESTS();
-}
+// int main(int argc, char **argv)
+// {
+//   ::testing::InitGoogleTest(&argc, argv);
+//    return RUN_ALL_TESTS();
+// }

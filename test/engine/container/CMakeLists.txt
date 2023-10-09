@@ -1,7 +1,7 @@
 
 add_executable(testContainer container.cpp)
 
-target_link_libraries(testContainer PRIVATE gtest)
+target_link_libraries(testContainer PRIVATE gtest gtest_main)
 target_link_libraries(testContainer PRIVATE container)
 
 target_include_directories(testContainer PRIVATE
@@ -9,5 +9,5 @@ target_include_directories(testContainer PRIVATE
     )
 
 target_include_directories(testContainer SYSTEM PRIVATE
-    "${PROJECT_SOURCE_DIR}/engine/container"
+    "${PROJECT_SOURCE_DIR}/engine"
     )

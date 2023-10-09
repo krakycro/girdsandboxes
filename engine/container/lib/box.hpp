@@ -11,46 +11,46 @@
 namespace Container
 {
 
-class Object;
-class Grid;
+    class Object;
+    class Grid;
 
-class Box: public Coord
-{
-    friend Object;
-    friend Grid;
+    class Box: public Coord
+    {
+        friend Object;
+        friend Grid;
 
-private:
-    // Coord coord;
-    container_ptr<Box>* self;
-    std::unordered_map<size_t, container_ptr<Object>> obj;
+        private:
+            // Coord coord;
+            container_ptr<Box>* self;
+            std::unordered_map<size_t, container_ptr<Object>> obj;
 
-    static container_ptr<Box> null;
+            static container_ptr<Box> null;
 
-public:
-    Box();
-    Box(const Box& o) = delete;
-    Box(const Box&&) = delete;
+        public:
+            Box();
+            Box(const Box& o) = delete;
+            Box(const Box&&) = delete;
 
-    // container_ptr<Object>* at(size_t i);
-    const container_ptr<Object>& at(size_t i);
-    const container_ptr<Object>& get(size_t key);
+            // container_ptr<Object>* at(size_t i);
+            const container_ptr<Object>& at(size_t i);
+            const container_ptr<Object>& get(size_t key);
 
-    void insert();
-    void insert(container_ptr<Object>& a);
+            void insert();
+            void insert(container_ptr<Object>& a);
 
-    static cont_status swap(container_ptr<Object>& a, container_ptr<Object>& b);
+            static cont_status swap(container_ptr<Object>& a, container_ptr<Object>& b);
 
-    // Geters/Setters
-    size_t get_obj_size() const;
-    const container_ptr<Box>& get_self();
+            // Geters/Setters
+            size_t get_obj_size() const;
+            const container_ptr<Box>& get_self();
 
-private:
-    container_ptr<Object>* point(size_t key);
-    container_ptr<Box>* point_self();
-    // container_ptr<std::unordered_map<size_t, container_ptr<Object>>>& get_obj();
+        private:
+            container_ptr<Object>* point(size_t key);
+            container_ptr<Box>* point_self();
+            // container_ptr<std::unordered_map<size_t, container_ptr<Object>>>& get_obj();
 
-    void set_self(container_ptr<Box>* self_obj);
-};
+            void set_self(container_ptr<Box>* self_obj);
+    };
 
 }; // Container
 

@@ -1,8 +1,8 @@
 
 add_executable(testWorld world.cpp)
 
-target_link_libraries(testWorld PRIVATE gtest)
-target_link_libraries(testWorld PRIVATE container)
+target_link_libraries(testWorld PRIVATE gtest gtest_main)
+# target_link_libraries(testWorld PRIVATE container)
 target_link_libraries(testWorld PRIVATE world)
 
 target_include_directories(testWorld PRIVATE
@@ -10,6 +10,5 @@ target_include_directories(testWorld PRIVATE
     )
 
 target_include_directories(testWorld SYSTEM PRIVATE
-    "${PROJECT_SOURCE_DIR}/engine/container"
-    "${PROJECT_SOURCE_DIR}/engine/world"
+    "${PROJECT_SOURCE_DIR}/engine"
     )

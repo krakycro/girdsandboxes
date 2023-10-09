@@ -3,9 +3,9 @@
 namespace World
 {
 
-Space::Space()
-{
-    
-}
+    Space::Space()
+    {
+        
+    }
 
 }; // World

@@ -2,18 +2,24 @@
 #include <iostream>
 #include <memory>
 
-#include <container.hpp>
-#include <world.hpp>
+#include <container/container.hpp>
+#include <world/world.hpp>
 
-std::unique_ptr<Container::Grid> GRID;
+std::unique_ptr<World::Item> ITEM;
+std::unique_ptr<World::Space> SPACE;
 
-TEST(World, ObjectNull)
+TEST(testWorld, ItemNull)
 {
 
 }
 
-int main(int argc, char **argv)
+TEST(testWorld, SpaceNull)
 {
-  ::testing::InitGoogleTest(&argc, argv);
-   return RUN_ALL_TESTS();
+
 }
+
+// int main(int argc, char **argv)
+// {
+//   ::testing::InitGoogleTest(&argc, argv);
+//    return RUN_ALL_TESTS();
+// }
