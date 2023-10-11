@@ -21,7 +21,7 @@ namespace Container
 
         private:
             // Coord coord;
-            container_ptr<Box>* self;
+            container_ptr<Box>* self{nullptr};
             std::unordered_map<size_t, container_ptr<Object>> obj;
 
             static container_ptr<Box> null;

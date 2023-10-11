@@ -9,7 +9,7 @@ namespace Container
 
     Box::Box()
     {
-        // this->obj = static_cast<container_ptr<std::unordered_map<size_t, container_ptr<Object>>>>(std::make_shared<std::unordered_map<size_t, container_ptr<Object>>>());
+        
     }
 
     const container_ptr<Object>& Box::at(size_t i)

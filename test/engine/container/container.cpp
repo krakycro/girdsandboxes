@@ -23,10 +23,10 @@ namespace testContainer
 
    TEST(testContainer, BoxEmpty)
    {
-      // Container::Box BOX;
-      //ASSERT_NO_THROW({
-         // OX.insert();
-      //});
+      Container::Box BOX;
+      ASSERT_NO_THROW({
+         BOX.insert();
+      });
       
    }
 

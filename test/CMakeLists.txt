@@ -6,7 +6,7 @@ add_subdirectory(engine)
 
 add_executable(testAll testAll.cpp)
 
-target_link_libraries(testAll PRIVATE gtest)
+target_link_libraries(testAll PRIVATE gtest gtest_main)
 target_link_libraries(testAll PRIVATE engine)
 
 target_include_directories(testAll PRIVATE
