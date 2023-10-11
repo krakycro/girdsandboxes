@@ -4,362 +4,371 @@
 
 #include <container/container.hpp>
 
-std::unique_ptr<Container::Grid> GRID;
-
-TEST(testContainer, ObjectNull)
-{
-   
-}
-
-TEST(testContainer, BoxNull)
+namespace testContainer
 {
 
-}
+   static std::unique_ptr<Container::Grid> GRID;
 
-TEST(testContainer, Create)
-{
-   ASSERT_NO_THROW({
-      GRID = std::unique_ptr<Container::Grid>(new Container::Grid(2, 2, 2));
-   });
-}
+   TEST(testContainer, ObjectNull)
+   {
 
-TEST(testContainer, Populate)
-{
-   ASSERT_NO_THROW({
-      for(int i=0;i<GRID->get_size_x();i++)
-      {
-         for(int j=0;j<GRID->get_size_y();j++)
+   }
+
+   TEST(testContainer, Create)
+   {
+      ASSERT_NO_THROW({
+         GRID = std::unique_ptr<Container::Grid>(new Container::Grid(2, 2, 2));
+      });
+   }
+
+   TEST(testContainer, BoxEmpty)
+   {
+      // Container::Box BOX;
+      //ASSERT_NO_THROW({
+         // OX.insert();
+      //});
+      
+   }
+
+   TEST(testContainer, Populate)
+   {
+      ASSERT_NO_THROW({
+         for(size_t i=0;i<GRID->get_size_x();i++)
          {
-            for(int k=0;k<GRID->get_size_z();k++)
+            for(size_t j=0;j<GRID->get_size_y();j++)
             {
-                  auto b1 = GRID->at(i,j,k);
-                  b1->insert();
-                  b1->insert();
-                  auto o1 = GRID->at(i,j,k,0);
-                  auto o2 = GRID->at(i,j,k,1);
-                  o1->val = i+j+k;
-                  o2->val = 2*(i+j+k);
+               for(size_t k=0;k<GRID->get_size_z();k++)
+               {
+                     auto b1 = GRID->at(i,j,k);
+                     b1->insert();
+                     b1->insert();
+                     auto o1 = GRID->at(i,j,k,0);
+                     auto o2 = GRID->at(i,j,k,1);
+                     o1->val = i+j+k;
+                     o2->val = 2*(i+j+k);
+               }
+            }
+         }
+      });
+   }
+
+   TEST(testContainer, CheckInsert)
+   {
+      for(size_t i=0;i<GRID->get_size_x();i++)
+      {
+         for(size_t j=0;j<GRID->get_size_y();j++)
+         {
+            for(size_t k=0;k<GRID->get_size_z();k++)
+            {
+               auto b1 = GRID->at(i,j,k);
+               auto o1 = GRID->at(i,j,k,0);
+               auto o2 = GRID->at(i,j,k,1);
+               EXPECT_TRUE(o1->val == i+j+k);
+               EXPECT_TRUE(o2->val == 2*(i+j+k));
+               EXPECT_TRUE(b1->get_x() == i);
+               EXPECT_TRUE(b1->get_y() == j);
+               EXPECT_TRUE(b1->get_z() == k);
             }
          }
       }
-   });
-}
-
-TEST(testContainer, CheckInsert)
-{
-   for(int i=0;i<GRID->get_size_x();i++)
-   {
-      for(int j=0;j<GRID->get_size_y();j++)
-      {
-         for(int k=0;k<GRID->get_size_z();k++)
-         {
-            auto b1 = GRID->at(i,j,k);
-            auto o1 = GRID->at(i,j,k,0);
-            auto o2 = GRID->at(i,j,k,1);
-            EXPECT_TRUE(o1->val == i+j+k);
-            EXPECT_TRUE(o2->val == 2*(i+j+k));
-            EXPECT_TRUE(b1->get_x() == i);
-            EXPECT_TRUE(b1->get_y() == j);
-            EXPECT_TRUE(b1->get_z() == k);
-         }
-      }
    }
-}
 
-TEST(testContainer, CheckCoord)
-{
-   std::cout << "Operation" << std::endl;
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,0,1);
-   auto o1 = b1->at(0);
-   auto o2 = b2->at(0);
-   auto c1 = o1->get_coord();
-   auto c2 = o2->get_coord();
+   TEST(testContainer, CheckCoord)
+   {
+      std::cout << "Operation" << std::endl;
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,0,1);
+      auto o1 = b1->at(0);
+      auto o2 = b2->at(0);
+      auto c1 = o1->get_coord();
+      auto c2 = o2->get_coord();
 
-   std::cout << "Checking" << std::endl;
-   EXPECT_TRUE(c1->get_x() == 1);
-   EXPECT_TRUE(c1->get_y() == 1);
-   EXPECT_TRUE(c1->get_z() == 0);
-   EXPECT_TRUE(c2->get_x() == 1);
-   EXPECT_TRUE(c2->get_y() == 0);
-   EXPECT_TRUE(c2->get_z() == 1);
-}
+      std::cout << "Checking" << std::endl;
+      EXPECT_TRUE(c1->get_x() == 1);
+      EXPECT_TRUE(c1->get_y() == 1);
+      EXPECT_TRUE(c1->get_z() == 0);
+      EXPECT_TRUE(c2->get_x() == 1);
+      EXPECT_TRUE(c2->get_y() == 0);
+      EXPECT_TRUE(c2->get_z() == 1);
+   }
 
-TEST(testContainer, CheckRoot)
-{
-   std::cout << "Operation" << std::endl;
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,0,1);
-   auto o1 = b1->at(0);
-   auto o2 = b2->at(0);
+   TEST(testContainer, CheckRoot)
+   {
+      std::cout << "Operation" << std::endl;
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,0,1);
+      auto o1 = b1->at(0);
+      auto o2 = b2->at(0);
 
-   std::cout << "Checking" << std::endl;
-   EXPECT_TRUE(o1->get_root() == b1);
-   EXPECT_TRUE(o1->get_self() == o1);
-   EXPECT_TRUE(o2->get_root() == b2);
-   EXPECT_TRUE(o2->get_self() == o2);
-}
+      std::cout << "Checking" << std::endl;
+      EXPECT_TRUE(o1->get_root() == b1);
+      EXPECT_TRUE(o1->get_self() == o1);
+      EXPECT_TRUE(o2->get_root() == b2);
+      EXPECT_TRUE(o2->get_self() == o2);
+   }
 
-TEST(testContainer, SwapGridFail)
-{
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,1,1);
+   TEST(testContainer, SwapGridFail)
+   {
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,1,1);
 
-   ASSERT_NO_THROW({
-      ASSERT_TRUE(Container::Grid::swap(b1, b1) == Container::cont_status::CONT_NOK );
-   });
+      ASSERT_NO_THROW({
+         ASSERT_TRUE(Container::Grid::swap(b1, b1) == Container::cont_status::CONT_NOK );
+      });
 
-   std::cout << "Checking get" << std::endl;
-   EXPECT_TRUE(b1->get_x() == 1);
-   EXPECT_TRUE(b1->get_y() == 1);
-   EXPECT_TRUE(b1->get_z() == 0);
-   EXPECT_TRUE(b2->get_x() == 1);
-   EXPECT_TRUE(b2->get_y() == 1);
-   EXPECT_TRUE(b2->get_z() == 1);
+      std::cout << "Checking get" << std::endl;
+      EXPECT_TRUE(b1->get_x() == 1);
+      EXPECT_TRUE(b1->get_y() == 1);
+      EXPECT_TRUE(b1->get_z() == 0);
+      EXPECT_TRUE(b2->get_x() == 1);
+      EXPECT_TRUE(b2->get_y() == 1);
+      EXPECT_TRUE(b2->get_z() == 1);
 
-   std::cout << "Checking var" << std::endl;
-   ASSERT_TRUE((GRID->at(1,1,0,0))->val == 2);
-   ASSERT_TRUE((GRID->at(1,1,0,1))->val == 4);
-   ASSERT_TRUE((GRID->at(1,1,1,0))->val == 3);
-   ASSERT_TRUE((GRID->at(1,1,1,1))->val == 6);
-}
+      std::cout << "Checking var" << std::endl;
+      ASSERT_TRUE((GRID->at(1,1,0,0))->val == 2);
+      ASSERT_TRUE((GRID->at(1,1,0,1))->val == 4);
+      ASSERT_TRUE((GRID->at(1,1,1,0))->val == 3);
+      ASSERT_TRUE((GRID->at(1,1,1,1))->val == 6);
+   }
 
-TEST(testContainer, SwapGrid)
-{
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,1,1);
-   ASSERT_NO_THROW({
-      ASSERT_TRUE(Container::Grid::swap(b1, b2) == Container::cont_status::CONT_OK );
-   });
-}
+   TEST(testContainer, SwapGrid)
+   {
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,1,1);
+      ASSERT_NO_THROW({
+         ASSERT_TRUE(Container::Grid::swap(b1, b2) == Container::cont_status::CONT_OK );
+      });
+   }
 
-TEST(testContainer, CheckGridSwaped)
-{
-   std::cout << "Checking val" << std::endl;
-   EXPECT_TRUE((GRID->at(1,1,0,0))->val == 3);
-   EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
-   EXPECT_TRUE((GRID->at(1,1,1,0))->val == 2);
-   EXPECT_TRUE((GRID->at(1,1,1,1))->val == 4);
+   TEST(testContainer, CheckGridSwaped)
+   {
+      std::cout << "Checking val" << std::endl;
+      EXPECT_TRUE((GRID->at(1,1,0,0))->val == 3);
+      EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
+      EXPECT_TRUE((GRID->at(1,1,1,0))->val == 2);
+      EXPECT_TRUE((GRID->at(1,1,1,1))->val == 4);
 
-   std::cout << "Checking get" << std::endl;
-   EXPECT_TRUE((GRID->at(1,1,0))->get_x() == 1);
-   EXPECT_TRUE((GRID->at(1,1,0))->get_y() == 1);
-   EXPECT_TRUE((GRID->at(1,1,0))->get_z() == 0);
-   EXPECT_TRUE((GRID->at(1,1,1))->get_x() == 1);
-   EXPECT_TRUE((GRID->at(1,1,1))->get_y() == 1);
-   EXPECT_TRUE((GRID->at(1,1,1))->get_z() == 1);
-}
+      std::cout << "Checking get" << std::endl;
+      EXPECT_TRUE((GRID->at(1,1,0))->get_x() == 1);
+      EXPECT_TRUE((GRID->at(1,1,0))->get_y() == 1);
+      EXPECT_TRUE((GRID->at(1,1,0))->get_z() == 0);
+      EXPECT_TRUE((GRID->at(1,1,1))->get_x() == 1);
+      EXPECT_TRUE((GRID->at(1,1,1))->get_y() == 1);
+      EXPECT_TRUE((GRID->at(1,1,1))->get_z() == 1);
+   }
 
-TEST(testContainer, CheckGridSwapedCoord)
-{
-   std::cout << "Operation" << std::endl;
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,0,1);
-   auto o1 = b1->at(0);
-   auto o2 = b2->at(0);
-   auto c1 = o1->get_coord();
-   auto c2 = o2->get_coord();
+   TEST(testContainer, CheckGridSwapedCoord)
+   {
+      std::cout << "Operation" << std::endl;
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,0,1);
+      auto o1 = b1->at(0);
+      auto o2 = b2->at(0);
+      auto c1 = o1->get_coord();
+      auto c2 = o2->get_coord();
 
-   std::cout << "Checking" << std::endl;
-   EXPECT_TRUE(c1->get_x() == 1);
-   EXPECT_TRUE(c1->get_y() == 1);
-   EXPECT_TRUE(c1->get_z() == 0);
-   EXPECT_TRUE(c2->get_x() == 1);
-   EXPECT_TRUE(c2->get_y() == 0);
-   EXPECT_TRUE(c2->get_z() == 1);
-}
+      std::cout << "Checking" << std::endl;
+      EXPECT_TRUE(c1->get_x() == 1);
+      EXPECT_TRUE(c1->get_y() == 1);
+      EXPECT_TRUE(c1->get_z() == 0);
+      EXPECT_TRUE(c2->get_x() == 1);
+      EXPECT_TRUE(c2->get_y() == 0);
+      EXPECT_TRUE(c2->get_z() == 1);
+   }
 
-TEST(testContainer, CheckGridSwapedRoot)
-{
-   std::cout << "Operation" << std::endl;
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,0,1);
-   auto o1 = b1->at(0);
-   auto o2 = b2->at(0);
+   TEST(testContainer, CheckGridSwapedRoot)
+   {
+      std::cout << "Operation" << std::endl;
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,0,1);
+      auto o1 = b1->at(0);
+      auto o2 = b2->at(0);
 
-   std::cout << "Checking" << std::endl;
-   EXPECT_TRUE(o1->get_root() == b1);
-   EXPECT_TRUE(o1->get_self() == o1);
-   EXPECT_TRUE(o2->get_root() == b2);
-   EXPECT_TRUE(o2->get_self() == o2);
-}
+      std::cout << "Checking" << std::endl;
+      EXPECT_TRUE(o1->get_root() == b1);
+      EXPECT_TRUE(o1->get_self() == o1);
+      EXPECT_TRUE(o2->get_root() == b2);
+      EXPECT_TRUE(o2->get_self() == o2);
+   }
 
-TEST(testContainer, Move)
-{
-   std::cout << "Operation" << std::endl;
-   auto b1 = GRID->at(1,1,0);
-   auto o1 = b1->at(0);
-   auto b2 = GRID->at(1,1,1);
-   ASSERT_NO_THROW({
-      b2->insert(o1);
-   });
-   o1->val = 11;
-   auto o2 = b2->at(0);
-   auto c2 = o2->get_coord();
+   TEST(testContainer, Move)
+   {
+      std::cout << "Operation" << std::endl;
+      auto b1 = GRID->at(1,1,0);
+      auto o1 = b1->at(0);
+      auto b2 = GRID->at(1,1,1);
+      ASSERT_NO_THROW({
+         b2->insert(o1);
+      });
+      o1->val = 11;
+      auto o2 = b2->at(0);
+      auto c2 = o2->get_coord();
 
-   std::cout << "Checking get" << std::endl;
-   EXPECT_TRUE(b1->get_obj_size() == 2);
-   EXPECT_TRUE(b2->get_obj_size() == 3);
-   EXPECT_TRUE(o2->val == 11);
-   EXPECT_TRUE(c2->get_x() == 1);
-   EXPECT_TRUE(c2->get_y() == 1);
-   EXPECT_TRUE(c2->get_z() == 1);
+      std::cout << "Checking get" << std::endl;
+      EXPECT_TRUE(b1->get_obj_size() == 2);
+      EXPECT_TRUE(b2->get_obj_size() == 3);
+      EXPECT_TRUE(o2->val == 11);
+      EXPECT_TRUE(c2->get_x() == 1);
+      EXPECT_TRUE(c2->get_y() == 1);
+      EXPECT_TRUE(c2->get_z() == 1);
 
-   std::cout << "Checking val" << std::endl;
-   ASSERT_DEATH({(GRID->at(1,1,0,0))->val = 5;}, "");
-   EXPECT_TRUE((GRID->at(1,1,0,0)) == nullptr);
-   EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
-   EXPECT_TRUE((GRID->at(1,1,1,0))->val == 11);
-   EXPECT_TRUE((GRID->at(1,1,1,1))->val == 2);
-   EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
+      std::cout << "Checking val" << std::endl;
+      ASSERT_DEATH({(GRID->at(1,1,0,0))->val = 5;}, "");
+      EXPECT_TRUE((GRID->at(1,1,0,0)) == nullptr);
+      EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
+      EXPECT_TRUE((GRID->at(1,1,1,0))->val == 11);
+      EXPECT_TRUE((GRID->at(1,1,1,1))->val == 2);
+      EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
 
-   std::cout << "Checking move" << std::endl;
-   auto o3 = b1->at(0);
-   EXPECT_TRUE(o3 == nullptr);
-}
+      std::cout << "Checking move" << std::endl;
+      auto o3 = b1->at(0);
+      EXPECT_TRUE(o3 == nullptr);
+   }
 
-TEST(testContainer, GetKey)
-{
-   std::cout << "Operation" << std::endl;
-   auto b = GRID->at(1,1,0);
-   auto o1 = b->at(1);
-   auto o2 = b->at(0);
+   TEST(testContainer, GetKey)
+   {
+      std::cout << "Operation" << std::endl;
+      auto b = GRID->at(1,1,0);
+      auto o1 = b->at(1);
+      auto o2 = b->at(0);
 
-   std::cout << "Checking" << std::endl;
-   auto g1 = b->get(o1->get_key());
-   EXPECT_TRUE(g1->val == 6);
-   ASSERT_DEATH(b->get((o2)->get_key()), "");
-}
+      std::cout << "Checking" << std::endl;
+      auto g1 = b->get(o1->get_key());
+      EXPECT_TRUE(g1->val == 6);
+      ASSERT_DEATH(b->get((o2)->get_key()), "");
+   }
 
-TEST(testContainer, MoveBack)
-{
-   std::cout << "Operation" << std::endl;
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,1,1);
-   auto o0 = b2->at(0);
+   TEST(testContainer, MoveBack)
+   {
+      std::cout << "Operation" << std::endl;
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,1,1);
+      auto o0 = b2->at(0);
 
-   EXPECT_NO_THROW({
-      b1->insert(o0);
-   });
+      EXPECT_NO_THROW({
+         b1->insert(o0);
+      });
 
-   auto o1 = b1->at(0);
-   auto c1 = o1->get_coord();
+      auto o1 = b1->at(0);
+      auto c1 = o1->get_coord();
 
-   std::cout << "Checking get" << std::endl;
-   EXPECT_TRUE(b1->get_obj_size() == 2);
-   EXPECT_TRUE(b2->get_obj_size() == 3);
-   EXPECT_TRUE(o1->val == 11);
-   EXPECT_TRUE(c1->get_x() == 1);
-   EXPECT_TRUE(c1->get_y() == 1);
-   EXPECT_TRUE(c1->get_z() == 0);
+      std::cout << "Checking get" << std::endl;
+      EXPECT_TRUE(b1->get_obj_size() == 2);
+      EXPECT_TRUE(b2->get_obj_size() == 3);
+      EXPECT_TRUE(o1->val == 11);
+      EXPECT_TRUE(c1->get_x() == 1);
+      EXPECT_TRUE(c1->get_y() == 1);
+      EXPECT_TRUE(c1->get_z() == 0);
 
-   std::cout << "Checking var" << std::endl;
-   EXPECT_TRUE((GRID->at(1,1,0,0))->val == 11);
-   EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
-   EXPECT_TRUE((GRID->at(1,1,1,0)) == nullptr);
-   EXPECT_TRUE((GRID->at(1,1,1,1))->val == 2);
-   EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
-}
+      std::cout << "Checking var" << std::endl;
+      EXPECT_TRUE((GRID->at(1,1,0,0))->val == 11);
+      EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
+      EXPECT_TRUE((GRID->at(1,1,1,0)) == nullptr);
+      EXPECT_TRUE((GRID->at(1,1,1,1))->val == 2);
+      EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
+   }
 
-TEST(testContainer, SwapBoxFail)
-{
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,1,1);
+   TEST(testContainer, SwapBoxFail)
+   {
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,1,1);
 
-   auto o0a = b1->at(0);
-   auto o0b = b2->at(0);
+      auto o0a = b1->at(0);
+      auto o0b = b2->at(0);
 
-   EXPECT_NO_THROW({
-      ASSERT_TRUE(Container::Box::swap(o0a, o0b) == Container::cont_status::CONT_NOK );
-   });
+      EXPECT_NO_THROW({
+         ASSERT_TRUE(Container::Box::swap(o0a, o0b) == Container::cont_status::CONT_NOK );
+      });
 
-   auto o1 = b1->at(0);
-   auto c1 = o1->get_coord();
+      auto o1 = b1->at(0);
+      auto c1 = o1->get_coord();
 
-   std::cout << "Checking get" << std::endl;
-   EXPECT_TRUE(b1->get_obj_size() == 2);
-   EXPECT_TRUE(b2->get_obj_size() == 3);
-   EXPECT_TRUE(o1->val == 11);
-   EXPECT_TRUE(c1->get_x() == 1);
-   EXPECT_TRUE(c1->get_y() == 1);
-   EXPECT_TRUE(c1->get_z() == 0);
+      std::cout << "Checking get" << std::endl;
+      EXPECT_TRUE(b1->get_obj_size() == 2);
+      EXPECT_TRUE(b2->get_obj_size() == 3);
+      EXPECT_TRUE(o1->val == 11);
+      EXPECT_TRUE(c1->get_x() == 1);
+      EXPECT_TRUE(c1->get_y() == 1);
+      EXPECT_TRUE(c1->get_z() == 0);
 
-   std::cout << "Checking var" << std::endl;
-   EXPECT_TRUE((GRID->at(1,1,0,0))->val == 11);
-   EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
-   EXPECT_TRUE((GRID->at(1,1,1,0)) == nullptr);
-   EXPECT_TRUE((GRID->at(1,1,1,1))->val == 2);
-   EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
-}
+      std::cout << "Checking var" << std::endl;
+      EXPECT_TRUE((GRID->at(1,1,0,0))->val == 11);
+      EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
+      EXPECT_TRUE((GRID->at(1,1,1,0)) == nullptr);
+      EXPECT_TRUE((GRID->at(1,1,1,1))->val == 2);
+      EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
+   }
 
-TEST(testContainer, SwapBox)
-{
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,1,1);
+   TEST(testContainer, SwapBox)
+   {
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,1,1);
 
-   auto o0a = b1->at(0);
-   auto o0b = b2->at(1);
+      auto o0a = b1->at(0);
+      auto o0b = b2->at(1);
 
-   EXPECT_NO_THROW({
-      ASSERT_TRUE(Container::Box::swap(o0a, o0b) == Container::cont_status::CONT_OK );
-   });
+      EXPECT_NO_THROW({
+         ASSERT_TRUE(Container::Box::swap(o0a, o0b) == Container::cont_status::CONT_OK );
+      });
 
-   EXPECT_TRUE(b1->get_obj_size() == 3);
-   EXPECT_TRUE(b2->get_obj_size() == 3);
-}
+      EXPECT_TRUE(b1->get_obj_size() == 3);
+      EXPECT_TRUE(b2->get_obj_size() == 3);
+   }
 
-TEST(testContainer, CheckBoxSwaped)
-{
-   std::cout << "Checking val" << std::endl;
-   EXPECT_TRUE((GRID->at(1,1,0,0))->val == 2);
-   EXPECT_TRUE((GRID->at(1,1,0,1)) == nullptr);
-   EXPECT_TRUE((GRID->at(1,1,0,2))->val == 6);
-   EXPECT_TRUE((GRID->at(1,1,1,0))->val == 11);
-   EXPECT_TRUE((GRID->at(1,1,1,1)) == nullptr);
-   EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
+   TEST(testContainer, CheckBoxSwaped)
+   {
+      std::cout << "Checking val" << std::endl;
+      EXPECT_TRUE((GRID->at(1,1,0,0))->val == 2);
+      EXPECT_TRUE((GRID->at(1,1,0,1)) == nullptr);
+      EXPECT_TRUE((GRID->at(1,1,0,2))->val == 6);
+      EXPECT_TRUE((GRID->at(1,1,1,0))->val == 11);
+      EXPECT_TRUE((GRID->at(1,1,1,1)) == nullptr);
+      EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
 
-   std::cout << "Checking get" << std::endl;
-   EXPECT_TRUE((GRID->at(1,1,0))->get_x() == 1);
-   EXPECT_TRUE((GRID->at(1,1,0))->get_y() == 1);
-   EXPECT_TRUE((GRID->at(1,1,0))->get_z() == 0);
-   EXPECT_TRUE((GRID->at(1,1,1))->get_x() == 1);
-   EXPECT_TRUE((GRID->at(1,1,1))->get_y() == 1);
-   EXPECT_TRUE((GRID->at(1,1,1))->get_z() == 1);
-}
+      std::cout << "Checking get" << std::endl;
+      EXPECT_TRUE((GRID->at(1,1,0))->get_x() == 1);
+      EXPECT_TRUE((GRID->at(1,1,0))->get_y() == 1);
+      EXPECT_TRUE((GRID->at(1,1,0))->get_z() == 0);
+      EXPECT_TRUE((GRID->at(1,1,1))->get_x() == 1);
+      EXPECT_TRUE((GRID->at(1,1,1))->get_y() == 1);
+      EXPECT_TRUE((GRID->at(1,1,1))->get_z() == 1);
+   }
 
-TEST(testContainer, CheckBoxSwapedCoord)
-{
-   std::cout << "Operation" << std::endl;
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,1,1);
-   auto o1 = b1->at(0);
-   auto o2 = b2->at(0);
-   auto c1 = o1->get_coord();
-   auto c2 = o2->get_coord();
+   TEST(testContainer, CheckBoxSwapedCoord)
+   {
+      std::cout << "Operation" << std::endl;
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,1,1);
+      auto o1 = b1->at(0);
+      auto o2 = b2->at(0);
+      auto c1 = o1->get_coord();
+      auto c2 = o2->get_coord();
 
-   std::cout << "Checking" << std::endl;
-   EXPECT_TRUE(c1->get_x() == 1);
-   EXPECT_TRUE(c1->get_y() == 1);
-   EXPECT_TRUE(c1->get_z() == 0);
-   EXPECT_TRUE(c2->get_x() == 1);
-   EXPECT_TRUE(c2->get_y() == 1);
-   EXPECT_TRUE(c2->get_z() == 1);
-}
+      std::cout << "Checking" << std::endl;
+      EXPECT_TRUE(c1->get_x() == 1);
+      EXPECT_TRUE(c1->get_y() == 1);
+      EXPECT_TRUE(c1->get_z() == 0);
+      EXPECT_TRUE(c2->get_x() == 1);
+      EXPECT_TRUE(c2->get_y() == 1);
+      EXPECT_TRUE(c2->get_z() == 1);
+   }
 
-TEST(testContainer, CheckBoxSwapedRoot)
-{
-   std::cout << "Operation" << std::endl;
-   auto b1 = GRID->at(1,1,0);
-   auto b2 = GRID->at(1,1,1);
-   auto o1 = b1->at(0);
-   auto o2 = b2->at(0);
+   TEST(testContainer, CheckBoxSwapedRoot)
+   {
+      std::cout << "Operation" << std::endl;
+      auto b1 = GRID->at(1,1,0);
+      auto b2 = GRID->at(1,1,1);
+      auto o1 = b1->at(0);
+      auto o2 = b2->at(0);
 
-   std::cout << "Checking" << std::endl;
-   EXPECT_TRUE(o1->get_root() == b1);
-   EXPECT_TRUE(o1->get_self() == o1);
-   EXPECT_TRUE(o2->get_root() == b2);
-   EXPECT_TRUE(o2->get_self() == o2);
-}
+      std::cout << "Checking" << std::endl;
+      EXPECT_TRUE(o1->get_root() == b1);
+      EXPECT_TRUE(o1->get_self() == o1);
+      EXPECT_TRUE(o2->get_root() == b2);
+      EXPECT_TRUE(o2->get_self() == o2);
+   }
+
+} // testContainer
 
 // int main(int argc, char **argv)
 // {

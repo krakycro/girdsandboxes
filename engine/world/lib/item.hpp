@@ -8,10 +8,10 @@ namespace World
 
     class Object;
 
-    class Item: private Container::Object
+    class Item: public Container::Object
     {
-
         private:
+            uint32_t density = 1;
 
         public:
             Item();

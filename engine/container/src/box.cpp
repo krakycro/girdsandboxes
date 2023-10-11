@@ -19,7 +19,7 @@ namespace Container
         if(i < this->obj.size())
         {
             auto iter = this->obj.begin();
-            for(auto c = 0 ; c < i ; c++)
+            for(size_t c = 0 ; c < i ; c++)
             {
                 iter++;
             }
@@ -63,9 +63,12 @@ namespace Container
 
     void Box::insert()
     {
-        auto tmp = Object::create();
-        tmp->set_root(this->point_self());
-        this->obj.insert({tmp->get_key(), std::move(tmp)});
+        if(this->self != nullptr)
+        {
+            auto tmp = Object::create();
+            tmp->set_root(this->point_self());
+            this->obj.insert({tmp->get_key(), std::move(tmp)});
+        }
     }
 
     void Box::insert(container_ptr<Object>& a)
@@ -116,14 +119,9 @@ namespace Container
         return ret;
     }
 
-    size_t Box::get_obj_size() const 
+    size_t Box::get_obj_size() const
     {
-        size_t tmp = 0;
-        if(this != nullptr)
-        {
-            tmp = this->obj.size();
-        }
-        return tmp;
+        return this->obj.size();
     }
 
     container_ptr<Box>* Box::point_self()

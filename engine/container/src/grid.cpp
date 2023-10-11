@@ -11,13 +11,13 @@ namespace Container
         this->size_x = size_x < 1 ? 1 : size_x;
         this->size_y = size_y < 1 ? 1 : size_y;
         this->size_z = size_z < 1 ? 1 : size_z;
-        for(int i=0; i < this->size_x; i++)
+        for(size_t i=0; i < this->size_x; i++)
         {
             this->coord.push_back(std::vector<std::vector<container_ptr<Box>>>());
-            for(int j=0; j < this->size_y; j++)
+            for(size_t j=0; j < this->size_y; j++)
             {
                 this->coord.at(i).push_back(std::vector<container_ptr<Box>>());
-                for(int k=0; k < this->size_z; k++)
+                for(size_t k=0; k < this->size_z; k++)
                 {
                     auto tmp = static_cast<container_ptr<Box>>(std::make_shared<Box>());
                     tmp->set_coord(i, j, k);
@@ -25,11 +25,11 @@ namespace Container
                 }
             }
         }
-        for(int i=0; i < this->size_x; i++)
+        for(size_t i=0; i < this->size_x; i++)
         {
-            for(int j=0; j < this->size_y; j++)
+            for(size_t j=0; j < this->size_y; j++)
             {
-                for(int k=0; k < this->size_z; k++)
+                for(size_t k=0; k < this->size_z; k++)
                 {
                     this->coord.at(i).at(j).at(k)->set_self(&this->coord.at(i).at(j).at(k));
                 }

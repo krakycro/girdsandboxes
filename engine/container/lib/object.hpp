@@ -30,7 +30,7 @@ namespace Container
             static container_ptr<Object> null;
 
         public:
-            int val;
+            size_t val;
 
             Object() = default;
             Object(const Object& o) = delete;
@@ -41,7 +41,7 @@ namespace Container
             const Coord* get_coord() const;
             const container_ptr<Box>& get_root() const;
             const container_ptr<Object>& get_self();
-            const size_t get_key() const;
+            size_t get_key() const;
 
         private:
             void set_root(container_ptr<Box>* root_obj);

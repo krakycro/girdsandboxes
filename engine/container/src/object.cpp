@@ -35,7 +35,7 @@ namespace Container
         return this->self;
     }
 
-    const size_t Object::get_key() const
+    size_t Object::get_key() const
     {
         return this->key;
     }

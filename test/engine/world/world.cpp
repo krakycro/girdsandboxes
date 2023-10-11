@@ -5,16 +5,34 @@
 #include <container/container.hpp>
 #include <world/world.hpp>
 
-std::unique_ptr<World::Item> ITEM;
-std::unique_ptr<World::Space> SPACE;
-
-TEST(testWorld, ItemNull)
+namespace testWorld
 {
 
-}
+  std::unique_ptr<Container::Grid> GRID;
+  std::unique_ptr<World::Item> ITEM;
+  std::unique_ptr<World::Space> SPACE;
 
-TEST(testWorld, SpaceNull)
-{
+  TEST(testWorld, ItemCreate)
+  {
+      ASSERT_NO_THROW({
+          GRID = std::unique_ptr<Container::Grid>(new Container::Grid(2, 2, 2));
+          ITEM = std::unique_ptr<World::Item>(new World::Item());
+      });
+  }
+
+  TEST(testWorld, SpaceCreate)
+  {
+      ASSERT_NO_THROW({
+          SPACE = std::unique_ptr<World::Space>(new World::Space());
+      });
+  }
+
+  TEST(testWorld, SpaceTest)
+  {
+      //auto o1 = GRID->at(1,1,1,0);
+
+      //SPACE->insert();
+  }
 
 }
 

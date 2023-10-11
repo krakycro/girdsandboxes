@@ -39,12 +39,12 @@
 
         },
         {
-            "name": "(gdb) TestContainer",
+            "name": "(gdb) TestAll",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/test/testContainer.exe",
+            "program": "${workspaceRoot}/build/test/testAll.exe",
             "args": [],
-            "stopAtEntry": true,
+            "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "externalConsole": false,
             "environment": [],
