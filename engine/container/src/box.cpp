@@ -1,9 +1,12 @@
 #include <memory>
+#include <stdio.h>
 
 #include "box.hpp"
 
 namespace Container
 {
+    template void Box::insert<Object>();
+    //template void Box::insert<Item>();
 
     container_ptr<Box> Box::null(nullptr);
 
@@ -61,8 +64,9 @@ namespace Container
         return *this->point(key);
     }
 
-    void Box::insert()
+    template<class T> void Box::insert()
     {
+        std::cout << "TRUE!" << std::endl;
         if(this->self != nullptr)
         {
             auto tmp = Object::create();

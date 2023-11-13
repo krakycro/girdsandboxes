@@ -29,9 +29,9 @@ namespace testWorld
 
   TEST(testWorld, SpaceTest)
   {
-      //auto o1 = GRID->at(1,1,1,0);
-
-      //SPACE->insert();
+      auto b1 = GRID->at(1,1,1);
+      // b1->insert<Container::Object>();
+      SPACE->insert<Container::Object>();
   }
 
 }

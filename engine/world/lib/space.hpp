@@ -19,7 +19,7 @@ namespace World
             Space(const Space& o) = delete;
             Space(const Space&&) = delete;
 
-            void insert();
+            template<class T> void insert();
 
     };
 

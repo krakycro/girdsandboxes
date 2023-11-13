@@ -25,7 +25,7 @@ namespace testContainer
    {
       Container::Box BOX;
       ASSERT_NO_THROW({
-         BOX.insert();
+         BOX.insert<Container::Object>();
       });
       
    }
@@ -40,8 +40,8 @@ namespace testContainer
                for(size_t k=0;k<GRID->get_size_z();k++)
                {
                      auto b1 = GRID->at(i,j,k);
-                     b1->insert();
-                     b1->insert();
+                     b1->insert<Container::Object>();
+                     b1->insert<Container::Object>();
                      auto o1 = GRID->at(i,j,k,0);
                      auto o2 = GRID->at(i,j,k,1);
                      o1->val = i+j+k;

@@ -12,7 +12,7 @@ int main()
         for(size_t j=0;j<GRID->get_size_y();j++)
         {
                     auto b1 = GRID->at(i,j,0);
-                    b1->insert();
+                    b1->insert<Container::Object>();
                     auto o1 = GRID->at(i,j,0,0);
                     o1->val = 2*(i+j)+1;
                     std::cout << b1 << "|" << b1->get_self() << "-" << o1->get_key() << ":" << o1->val << ", ";

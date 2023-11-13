@@ -14,6 +14,8 @@ namespace Container
     class Object;
     class Grid;
 
+    //class Item;
+
     class Box: public Coord
     {
         friend Object;
@@ -35,7 +37,7 @@ namespace Container
             const container_ptr<Object>& at(size_t i);
             const container_ptr<Object>& get(size_t key);
 
-            void insert();
+            template<class T> void insert();
             void insert(container_ptr<Object>& a);
 
             static cont_status swap(container_ptr<Object>& a, container_ptr<Object>& b);
