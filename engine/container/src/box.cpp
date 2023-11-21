@@ -12,7 +12,8 @@ namespace Container
 
     Box::Box()
     {
-        
+        this->set_coord(0,0,0);
+        this->set_self(&Box::null);
     }
 
     const container_ptr<Object>& Box::at(size_t i)
@@ -69,7 +70,7 @@ namespace Container
         std::cout << "TRUE!" << std::endl;
         if(this->self != nullptr)
         {
-            auto tmp = Object::create();
+            auto tmp = T::create();
             tmp->set_root(this->point_self());
             this->obj.insert({tmp->get_key(), std::move(tmp)});
         }

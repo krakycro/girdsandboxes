@@ -9,11 +9,6 @@ namespace testContainer
 
    static std::unique_ptr<Container::Grid> GRID;
 
-   TEST(testContainer, ObjectNull)
-   {
-
-   }
-
    TEST(testContainer, Create)
    {
       ASSERT_NO_THROW({
@@ -21,13 +16,22 @@ namespace testContainer
       });
    }
 
-   TEST(testContainer, BoxEmpty)
+   TEST(testContainer, BoxNull)
    {
       Container::Box BOX;
       ASSERT_NO_THROW({
          BOX.insert<Container::Object>();
       });
-      
+   }
+
+      TEST(testContainer, BoxEmpty)
+   {
+      ASSERT_NO_THROW({
+         auto b1 = std::make_shared<Container::Box>();
+         b1->insert<Container::Object>();
+         auto o1 = b1->at(0);
+         o1->val = 1;
+      });
    }
 
    TEST(testContainer, Populate)
