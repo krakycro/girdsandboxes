@@ -7,28 +7,28 @@
 namespace testContainer
 {
 
-   static std::unique_ptr<Container::Grid> GRID;
+   static std::unique_ptr<Engine::Grid> GRID;
 
    TEST(testContainer, Create)
    {
       ASSERT_NO_THROW({
-         GRID = std::unique_ptr<Container::Grid>(new Container::Grid(2, 2, 2));
+         GRID = std::unique_ptr<Engine::Grid>(new Engine::Grid(2, 2, 2));
       });
    }
 
    TEST(testContainer, BoxNull)
    {
-      Container::Box BOX;
+      Engine::Box BOX;
       ASSERT_NO_THROW({
-         BOX.insert<Container::Object>();
+         BOX.insert();
       });
    }
 
       TEST(testContainer, BoxEmpty)
    {
       ASSERT_NO_THROW({
-         auto b1 = std::make_shared<Container::Box>();
-         b1->insert<Container::Object>();
+         auto b1 = std::make_shared<Engine::Box>();
+         b1->insert();
          auto o1 = b1->at(0);
          o1->val = 1;
       });
@@ -44,8 +44,8 @@ namespace testContainer
                for(size_t k=0;k<GRID->get_size_z();k++)
                {
                      auto b1 = GRID->at(i,j,k);
-                     b1->insert<Container::Object>();
-                     b1->insert<Container::Object>();
+                     b1->insert();
+                     b1->insert();
                      auto o1 = GRID->at(i,j,k,0);
                      auto o2 = GRID->at(i,j,k,1);
                      o1->val = i+j+k;
@@ -117,7 +117,7 @@ namespace testContainer
       auto b2 = GRID->at(1,1,1);
 
       ASSERT_NO_THROW({
-         ASSERT_TRUE(Container::Grid::swap(b1, b1) == Container::cont_status::CONT_NOK );
+         ASSERT_TRUE(Engine::Grid::swap(b1, b1) == Engine::cont_status::CONT_NOK );
       });
 
       std::cout << "Checking get" << std::endl;
@@ -140,7 +140,7 @@ namespace testContainer
       auto b1 = GRID->at(1,1,0);
       auto b2 = GRID->at(1,1,1);
       ASSERT_NO_THROW({
-         ASSERT_TRUE(Container::Grid::swap(b1, b2) == Container::cont_status::CONT_OK );
+         ASSERT_TRUE(Engine::Grid::swap(b1, b2) == Engine::cont_status::CONT_OK );
       });
    }
 
@@ -281,7 +281,7 @@ namespace testContainer
       auto o0b = b2->at(0);
 
       EXPECT_NO_THROW({
-         ASSERT_TRUE(Container::Box::swap(o0a, o0b) == Container::cont_status::CONT_NOK );
+         ASSERT_TRUE(Engine::Box::swap(o0a, o0b) == Engine::cont_status::CONT_NOK );
       });
 
       auto o1 = b1->at(0);
@@ -312,7 +312,7 @@ namespace testContainer
       auto o0b = b2->at(1);
 
       EXPECT_NO_THROW({
-         ASSERT_TRUE(Container::Box::swap(o0a, o0b) == Container::cont_status::CONT_OK );
+         ASSERT_TRUE(Engine::Box::swap(o0a, o0b) == Engine::cont_status::CONT_OK );
       });
 
       EXPECT_TRUE(b1->get_obj_size() == 3);

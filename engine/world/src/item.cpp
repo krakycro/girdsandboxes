@@ -1,6 +1,6 @@
 #include "item.hpp"
 
-namespace World
+namespace Engine
 {
 
     Item::Item()
@@ -8,4 +8,4 @@ namespace World
         
     }
 
-}; // World
+}; // Engine

@@ -3,7 +3,7 @@
 
 #include "grid.hpp"
 
-namespace Container
+namespace Engine
 {
 
     Grid::Grid(size_t size_x, size_t size_y, size_t size_z)
@@ -13,13 +13,13 @@ namespace Container
         this->size_z = size_z < 1 ? 1 : size_z;
         for(size_t i=0; i < this->size_x; i++)
         {
-            this->coord.push_back(std::vector<std::vector<container_ptr<Box>>>());
+            this->coord.push_back(std::vector<std::vector<std::shared_ptr<Box>>>());
             for(size_t j=0; j < this->size_y; j++)
             {
-                this->coord.at(i).push_back(std::vector<container_ptr<Box>>());
+                this->coord.at(i).push_back(std::vector<std::shared_ptr<Box>>());
                 for(size_t k=0; k < this->size_z; k++)
                 {
-                    auto tmp = static_cast<container_ptr<Box>>(std::make_shared<Box>());
+                    auto tmp = static_cast<std::shared_ptr<Box>>(std::make_shared<Box>());
                     tmp->set_coord(i, j, k);
                     this->coord.at(i).at(j).push_back(std::move(tmp));
                 }
@@ -44,9 +44,9 @@ namespace Container
         this->z = z;
     }
 
-    const container_ptr<Box>& Grid::at(size_t x, size_t y, size_t z)
+    const std::shared_ptr<Box>& Grid::at(size_t x, size_t y, size_t z)
     {
-        container_ptr<Box>* tmp = &Box::null;
+        std::shared_ptr<Box>* tmp = &Box::null;
         if((x < this->coord.size()) && (y < this->coord.at(x).size()) &&(z < this->coord.at(x).at(y).size()))
         {
             tmp = &this->coord.at(x).at(y).at(z);
@@ -58,9 +58,9 @@ namespace Container
         return *tmp;
     }
 
-    const container_ptr<Object>& Grid::at(size_t x, size_t y, size_t z, size_t o)
+    const std::shared_ptr<Object>& Grid::at(size_t x, size_t y, size_t z, size_t o)
     {
-        const container_ptr<Object>* tmp = &Object::null;
+        const std::shared_ptr<Object>* tmp = &Object::null;
         if(this->at(x, y, z) != nullptr)
         {
             tmp = &this->coord.at(x).at(y).at(z)->at(o);
@@ -72,7 +72,7 @@ namespace Container
         return *tmp;
     }
 
-    // cont_status Grid::swap(container_ptr<Box>* a, container_ptr<Box>* b)
+    // cont_status Grid::swap(std::shared_ptr<Box>* a, std::shared_ptr<Box>* b)
     // {
     //     cont_status ret = cont_status::CONT_NOK;
     //     if((a != nullptr) && (b != nullptr) && (a->get() != b->get()))
@@ -94,13 +94,13 @@ namespace Container
     //     return ret;
     // }
 
-    cont_status Grid::swap(container_ptr<Box>& a, container_ptr<Box>& b)
+    cont_status Grid::swap(std::shared_ptr<Box>& a, std::shared_ptr<Box>& b)
     {
         cont_status ret = cont_status::CONT_NOK;
         if((a != nullptr) && (b != nullptr) && (a.get() != b.get()))
         {
-            // container_ptr<Box>* self1 = (*a)->get_self();
-            // container_ptr<Box>* self2 = (*b)->get_self();
+            // std::shared_ptr<Box>* self1 = (*a)->get_self();
+            // std::shared_ptr<Box>* self2 = (*b)->get_self();
             // auto coordA = (*self1)->get_coord();
             // auto coordB = (*self2)->get_coord();
             // auto tmp = std::move((*self1));
@@ -147,4 +147,4 @@ namespace Container
         return this->size_z;
     }
 
-}; // Container
+}; // Engine

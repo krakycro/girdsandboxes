@@ -9,7 +9,7 @@
 #include "object.hpp"
 #include "box.hpp"
 
-namespace Container
+namespace Engine
 {
 
     class Box;
@@ -19,7 +19,7 @@ namespace Container
     {
         private:
             size_t size_x, size_y, size_z;
-            std::vector<std::vector<std::vector<container_ptr<Box>>>> coord;
+            std::vector<std::vector<std::vector<std::shared_ptr<Box>>>> coord;
 
         public:
             Grid() = delete;
@@ -27,12 +27,12 @@ namespace Container
             Grid(const Grid&&) = delete;
             Grid(size_t x, size_t y, size_t z);
 
-            // container_ptr<Box>* at(size_t x, size_t y, size_t z);
-            const container_ptr<Box>& at(size_t x, size_t y, size_t z);
-            const container_ptr<Object>& at(size_t x, size_t y, size_t z, size_t o);
+            // std::shared_ptr<Box>* at(size_t x, size_t y, size_t z);
+            const std::shared_ptr<Box>& at(size_t x, size_t y, size_t z);
+            const std::shared_ptr<Object>& at(size_t x, size_t y, size_t z, size_t o);
 
-            // static cont_status swap(container_ptr<Box>* a, container_ptr<Box>* b);
-            static cont_status swap(container_ptr<Box>& a, container_ptr<Box>& b);
+            // static cont_status swap(std::shared_ptr<Box>* a, std::shared_ptr<Box>* b);
+            static cont_status swap(std::shared_ptr<Box>& a, std::shared_ptr<Box>& b);
 
             size_t get_size_x() const;
             size_t get_size_y() const;
@@ -42,6 +42,6 @@ namespace Container
             void set_coord(size_t x, size_t y, size_t z);
     };
 
-}; // Container
+}; // Engine
 
 #endif // GRID_HPP

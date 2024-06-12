@@ -6,7 +6,7 @@
 
 #include "general.hpp"
 
-namespace Container
+namespace Engine
 {
 
     class Coord
@@ -33,6 +33,6 @@ namespace Container
             void set_coord(std::tuple<size_t, size_t, size_t>& t);
     };
 
-}; // Container
+}; // Engine
 
 #endif // COORD_HPP

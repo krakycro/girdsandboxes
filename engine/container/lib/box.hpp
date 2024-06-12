@@ -8,13 +8,14 @@
 #include "coord.hpp"
 #include "object.hpp"
 
-namespace Container
+namespace Engine
 {
 
     class Object;
     class Grid;
 
     //class Item;
+    //class Terrain;
 
     class Box: public Coord
     {
@@ -23,37 +24,38 @@ namespace Container
 
         private:
             // Coord coord;
-            container_ptr<Box>* self{nullptr};
-            std::unordered_map<size_t, container_ptr<Object>> obj;
+            std::shared_ptr<Box>* self{nullptr};
+            std::unordered_map<size_t, std::shared_ptr<Object>> obj;
 
-            static container_ptr<Box> null;
+            static std::shared_ptr<Box> null;
 
         public:
             Box();
             Box(const Box& o) = delete;
             Box(const Box&&) = delete;
+            //virtual ~Box() = default;
 
-            // container_ptr<Object>* at(size_t i);
-            const container_ptr<Object>& at(size_t i);
-            const container_ptr<Object>& get(size_t key);
+            // std::shared_ptr<Object>* at(size_t i);
+            const std::shared_ptr<Object>& at(size_t i);
+            const std::shared_ptr<Object>& get(size_t key);
 
-            template<class T> void insert();
-            void insert(container_ptr<Object>& a);
+            void insert();
+            void insert(std::shared_ptr<Object>& a);
 
-            static cont_status swap(container_ptr<Object>& a, container_ptr<Object>& b);
+            static cont_status swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b);
 
             // Geters/Setters
             size_t get_obj_size() const;
-            const container_ptr<Box>& get_self();
+            const std::shared_ptr<Box>& get_self();
 
         private:
-            container_ptr<Object>* point(size_t key);
-            container_ptr<Box>* point_self();
-            // container_ptr<std::unordered_map<size_t, container_ptr<Object>>>& get_obj();
+            std::shared_ptr<Object>* point(size_t key);
+            std::shared_ptr<Box>* point_self();
+            // std::shared_ptr<std::unordered_map<size_t, std::shared_ptr<Object>>>& get_obj();
 
-            void set_self(container_ptr<Box>* self_obj);
+            void set_self(std::shared_ptr<Box>* self_obj);
     };
 
-}; // Container
+}; // Engine
 
 #endif // BOX_HPP

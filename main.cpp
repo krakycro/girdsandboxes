@@ -5,14 +5,14 @@
 
 int main()
 {
-    auto GRID = std::unique_ptr<Container::Grid>(new Container::Grid(2, 2, 1));
+    auto GRID = std::unique_ptr<Engine::Grid>(new Engine::Grid(2, 2, 1));
 
     for(size_t i=0;i<GRID->get_size_x();i++)
     {
         for(size_t j=0;j<GRID->get_size_y();j++)
         {
                     auto b1 = GRID->at(i,j,0);
-                    b1->insert<Container::Object>();
+                    b1->insert();
                     auto o1 = GRID->at(i,j,0,0);
                     o1->val = 2*(i+j)+1;
                     std::cout << b1 << "|" << b1->get_self() << "-" << o1->get_key() << ":" << o1->val << ", ";
@@ -28,7 +28,7 @@ int main()
 
     std::cout << GRID->at(1,1,0) << "|" << b1 << " " << GRID->at(1,0,0) << "|" << b2 << std::endl;
 
-    Container::Grid::swap(b1, b2);
+    Engine::Grid::swap(b1, b2);
     (b1)->insert(o2);
     //(b2)->insert(o1);
 

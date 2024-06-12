@@ -3,16 +3,16 @@
 
 #include "object.hpp"
 
-namespace Container
+namespace Engine
 {
 
     size_t Object::oid = 0;
-    container_ptr<Object> Object::null(nullptr);
-    std::unordered_map<size_t, container_ptr<Object>> Object::olist;
+    std::shared_ptr<Object> Object::null(nullptr);
+    std::unordered_map<size_t, std::shared_ptr<Object>> Object::olist;
 
-    container_ptr<Object>& Object::create()
+    std::shared_ptr<Object>& Object::create()
     {
-        auto tmp = static_cast<container_ptr<Object>>(std::make_shared<Object>());
+        auto tmp = std::make_shared<Object>();
         tmp->self = tmp;
         tmp->key = Object::oid;
         Object::olist.insert({Object::oid, std::move(tmp)});
@@ -25,12 +25,12 @@ namespace Container
         return this->root.get();
     }
 
-    const container_ptr<Box>& Object::get_root() const
+    const std::shared_ptr<Box>& Object::get_root() const
     {
         return this->root;
     }
 
-    const container_ptr<Object>& Object::get_self()
+    const std::shared_ptr<Object>& Object::get_self()
     {
         return this->self;
     }
@@ -40,12 +40,12 @@ namespace Container
         return this->key;
     }
 
-    void Object::set_root(container_ptr<Box>* root_obj)
+    void Object::set_root(std::shared_ptr<Box>* root_obj)
     {
         this->root = *root_obj;
     }
 
-    void Object::set_self(container_ptr<Object>& self_obj)
+    void Object::set_self(std::shared_ptr<Object>& self_obj)
     {
         this->self = self_obj;
     }
@@ -55,4 +55,4 @@ namespace Container
         this->key = new_key;
     }
 
-}; // Container
+}; // Engine

@@ -3,12 +3,12 @@
 
 #include <box.hpp>
 
-namespace World
+namespace Engine
 {
 
     class Box;
 
-    class Space: public Container::Box
+    class Space: public Box
     {
         private:
             uint32_t volume = 0;
@@ -19,10 +19,10 @@ namespace World
             Space(const Space& o) = delete;
             Space(const Space&&) = delete;
 
-            template<class T> void insert();
+            void insert();
 
     };
 
-}; // World
+}; // Engine
 
 #endif // SPACE_HPP

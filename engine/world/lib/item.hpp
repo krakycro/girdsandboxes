@@ -3,23 +3,26 @@
 
 #include <object.hpp>
 
-namespace World
+namespace Engine
 {
 
     class Object;
 
-    class Item: public Container::Object
+    class Item: public Object
     {
-        private:
+        public:
+            uint32_t ta = 1;
             uint32_t density = 1;
 
         public:
             Item();
             Item(const Item& o) = delete;
             Item(const Item&&) = delete;
+            //~Item() = default;
+
 
     };
 
-}; // World
+}; // Engine
 
 #endif // ITEM_HPP

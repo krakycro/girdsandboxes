@@ -3,12 +3,13 @@
 
 #include "box.hpp"
 
-namespace Container
+namespace Engine
 {
-    template void Box::insert<Object>();
-    //template void Box::insert<Item>();
+    // template void Box::insert<Object>();
+    // template void Box::insert<Item>();
+    // template void Box::insert<Terrain>();
 
-    container_ptr<Box> Box::null(nullptr);
+    std::shared_ptr<Box> Box::null(nullptr);
 
     Box::Box()
     {
@@ -16,10 +17,10 @@ namespace Container
         this->set_self(&Box::null);
     }
 
-    const container_ptr<Object>& Box::at(size_t i)
+    const std::shared_ptr<Object>& Box::at(size_t i)
     {
         // OLD: return this->obj.at(i);
-        container_ptr<Object>* tmp = &Object::null;
+        std::shared_ptr<Object>* tmp = &Object::null;
         if(i < this->obj.size())
         {
             auto iter = this->obj.begin();
@@ -43,9 +44,9 @@ namespace Container
         return *tmp;
     }
 
-    container_ptr<Object>* Box::point(size_t key)
+    std::shared_ptr<Object>* Box::point(size_t key)
     {
-        container_ptr<Object>* tmp = &Object::null;
+        std::shared_ptr<Object>* tmp = &Object::null;
         if(this->obj.contains(key) == true)
         {
             if(this->obj.at(key) != nullptr)
@@ -60,23 +61,23 @@ namespace Container
         return tmp;
     }
 
-    const container_ptr<Object>& Box::get(size_t key)
+    const std::shared_ptr<Object>& Box::get(size_t key)
     {
         return *this->point(key);
     }
 
-    template<class T> void Box::insert()
+    void Box::insert()
     {
-        std::cout << "TRUE!" << std::endl;
+        std::cout << "Box!" << std::endl;
         if(this->self != nullptr)
         {
-            auto tmp = T::create();
+            auto tmp = Object::create();
             tmp->set_root(this->point_self());
             this->obj.insert({tmp->get_key(), std::move(tmp)});
         }
     }
 
-    void Box::insert(container_ptr<Object>& a)
+    void Box::insert(std::shared_ptr<Object>& a)
     {
         if(a != nullptr)
         {
@@ -105,7 +106,7 @@ namespace Container
         }
     }
 
-    cont_status Box::swap(container_ptr<Object>& a, container_ptr<Object>& b)
+    cont_status Box::swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b)
     {
         cont_status ret = cont_status::CONT_NOK;
     if((a != nullptr) && (b != nullptr) && ((a)->get_key() != (b)->get_key()))
@@ -129,24 +130,24 @@ namespace Container
         return this->obj.size();
     }
 
-    container_ptr<Box>* Box::point_self()
+    std::shared_ptr<Box>* Box::point_self()
     {
         return this->self;
     }
 
-    const container_ptr<Box>& Box::get_self()
+    const std::shared_ptr<Box>& Box::get_self()
     {
         return *this->self;
     }
 
-    // container_ptr<std::unordered_map<size_t, container_ptr<Object>>>& Box::get_obj()
+    // std::shared_ptr<std::unordered_map<size_t, std::shared_ptr<Object>>>& Box::get_obj()
     // {
     //     return this->obj;
     // }
 
-    void Box::set_self(container_ptr<Box>* self_obj)
+    void Box::set_self(std::shared_ptr<Box>* self_obj)
     {
         this->self = self_obj;
     }
 
-}; // Container
+}; // Engine

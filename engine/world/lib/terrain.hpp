@@ -3,14 +3,14 @@
 
 #include <object.hpp>
 
-namespace World
+namespace Engine
 {
 
     class Object;
 
-    class Terrain: public Container::Object
+    class Terrain: public Object
     {
-        private:
+        public:
             uint32_t density = 1;
             uint32_t quantity = 1;
 
@@ -18,9 +18,10 @@ namespace World
             Terrain();
             Terrain(const Terrain& o) = delete;
             Terrain(const Terrain&&) = delete;
+            //~Terrain() = default;
 
     };
 
-}; // World
+}; // Engine
 
 #endif // TERRAIN_HPP

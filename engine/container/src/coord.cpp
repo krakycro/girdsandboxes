@@ -2,7 +2,7 @@
 
 #include "coord.hpp"
 
-namespace Container
+namespace Engine
 {
 
     Coord::Coord(): x(0), y(0), z(0){};
@@ -42,4 +42,4 @@ namespace Container
         return this->z;
     }
 
-}; // Container
+}; // Engine

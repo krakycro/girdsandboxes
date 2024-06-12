@@ -1,6 +1,6 @@
 #include "terrain.hpp"
 
-namespace World
+namespace Engine
 {
 
     Terrain::Terrain()
@@ -8,4 +8,4 @@ namespace World
         
     }
 
-}; // World
+}; // Engine

@@ -8,11 +8,13 @@
 #include "box.hpp"
 #include "coord.hpp"
 
-namespace Container
+namespace Engine
 {
 
     class Box;
     class Grid;
+
+    //class Item;
 
     class Object
     {
@@ -20,36 +22,37 @@ namespace Container
         friend Grid;
 
         private:
-            container_ptr<Box> root;
-            container_ptr<Object> self;
+            std::shared_ptr<Box> root;
+            std::shared_ptr<Object> self;
 
             size_t key;
 
-            static size_t oid;
-            static std::unordered_map<size_t, container_ptr<Object>> olist;
-            static container_ptr<Object> null;
+            static std::unordered_map<size_t, std::shared_ptr<Object>> olist;
+            static std::shared_ptr<Object> null;
 
         public:
+            static size_t oid;
             size_t val;
 
             Object() = default;
             Object(const Object& o) = delete;
             Object(const Object&&) = delete;
+            //virtual ~Object() = default;
 
-            static container_ptr<Object>& create();
+            static std::shared_ptr<Object>& create();
 
             const Coord* get_coord() const;
-            const container_ptr<Box>& get_root() const;
-            const container_ptr<Object>& get_self();
+            const std::shared_ptr<Box>& get_root() const;
+            const std::shared_ptr<Object>& get_self();
             size_t get_key() const;
 
         private:
-            void set_root(container_ptr<Box>* root_obj);
-            void set_self(container_ptr<Object>& self_obj);
+            void set_root(std::shared_ptr<Box>* root_obj);
+            void set_self(std::shared_ptr<Object>& self_obj);
             void set_key(size_t new_key);
 
     };
 
-}; // Container
+}; // Engine
 
 #endif // OBJECT_HPP
