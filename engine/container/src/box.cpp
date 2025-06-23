@@ -28,7 +28,7 @@ namespace Engine
             {
                 iter++;
             }
-            if((iter->second != nullptr)) // No need: && (this->obj.find(iter->second->key) != this->obj.end()))
+            if((iter->second != Object::null)) // No need: && (this->obj.find(iter->second->key) != this->obj.end()))
             {
                 tmp = &this->obj.at(iter->second->get_key());
             }
@@ -47,17 +47,25 @@ namespace Engine
     std::shared_ptr<Object>* Box::point(size_t key)
     {
         std::shared_ptr<Object>* tmp = &Object::null;
-        if(this->obj.contains(key) == true)
+        if(this->obj.size() != 0)
         {
-            if(this->obj.at(key) != nullptr)
+            if(this->obj.contains(key) == true)
             {
-                tmp = &this->obj.at(key);
+                if(this->obj.at(key) != Object::null)
+                {
+                    tmp = &this->obj.at(key);
+                }
+            }
+            else
+            {
+
             }
         }
         else
         {
 
         }
+
         return tmp;
     }
 
@@ -79,10 +87,18 @@ namespace Engine
 
     void Box::insert(std::shared_ptr<Object>& a)
     {
-        if(a != nullptr)
+        if(a != Object::null && a->get_self() != Object::null)
         {
+            std::shared_ptr<Engine::Object> *self{nullptr};
             auto root = a->get_root();
-            auto self = root->point(a->get_key());
+            if(root == Box::null)
+            {
+                self = &a;
+            }
+            else
+            {
+                self = root->point(a->get_key());
+            }
             if(self != nullptr)
             {
                 (*self)->set_root(this->point_self());
@@ -109,7 +125,7 @@ namespace Engine
     cont_status Box::swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b)
     {
         cont_status ret = cont_status::CONT_NOK;
-    if((a != nullptr) && (b != nullptr) && ((a)->get_key() != (b)->get_key()))
+    if((a != Object::null) && (b != Object::null) && ((a)->get_key() != (b)->get_key()))
         { 
             auto rootA = (a)->get_root();
             auto rootB = (b)->get_root();
@@ -132,12 +148,12 @@ namespace Engine
 
     std::shared_ptr<Box>* Box::point_self()
     {
-        return this->self;
+        return (this->self != nullptr)? this->self : nullptr;
     }
 
     const std::shared_ptr<Box>& Box::get_self()
     {
-        return *this->self;
+        return (this->self != nullptr)? *this->self : Box::null;
     }
 
     // std::shared_ptr<std::unordered_map<size_t, std::shared_ptr<Object>>>& Box::get_obj()
@@ -148,6 +164,11 @@ namespace Engine
     void Box::set_self(std::shared_ptr<Box>* self_obj)
     {
         this->self = self_obj;
+    }
+
+    const std::shared_ptr<Box>& Box::get_null()
+    {
+        return Box::null;
     }
 
 }; // Engine

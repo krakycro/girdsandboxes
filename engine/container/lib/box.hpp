@@ -23,11 +23,10 @@ namespace Engine
         friend Grid;
 
         private:
-            // Coord coord;
+            static std::shared_ptr<Box> null;
+
             std::shared_ptr<Box>* self{nullptr};
             std::unordered_map<size_t, std::shared_ptr<Object>> obj;
-
-            static std::shared_ptr<Box> null;
 
         public:
             Box();
@@ -43,6 +42,7 @@ namespace Engine
             void insert(std::shared_ptr<Object>& a);
 
             static cont_status swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b);
+            static const std::shared_ptr<Box>& get_null();
 
             // Geters/Setters
             size_t get_obj_size() const;

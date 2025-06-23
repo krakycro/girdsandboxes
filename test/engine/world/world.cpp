@@ -26,8 +26,12 @@ namespace testWorld
    TEST(testWorld, ItemCreate)
    {
        ASSERT_NO_THROW({
-           OBJ  = std::make_shared<Engine::Object>();
+           OBJ  = Engine::Object::create();
+           OBJ->val = 5;
+           std::cerr << "OBJ:" << OBJ->get_key() << ":" << OBJ->val << std::endl;
            ITEM = std::make_shared<Engine::Item>();
+           ITEM->val = 7;
+           std::cerr << "ITEM:" << ITEM->get_key() << ":" << ITEM->val << std::endl;
        });
    }
 
@@ -41,6 +45,24 @@ namespace testWorld
 
    TEST(testWorld, SpaceTest)
    {
+        auto o1 = Engine::Object::create();
+        BOX->insert();
+        std::cout << "BOX size:" << BOX->get_obj_size() << "\n";
+        BOX->insert();
+        std::cout << "BOX size:" << BOX->get_obj_size() << "\n";
+        BOX->at(0)->val = 1;
+        BOX->at(1)->val = 2;
+        std::cerr << "Key1 " << BOX->at(0)->get_key() << " Val1:" << BOX->at(0)->val << std::endl;
+        std::cerr << "Key2 " << BOX->at(1)->get_key() << " Val2:" << BOX->at(1)->val << std::endl;
+        BOX->insert(OBJ);
+        std::cout << "BOX size:" << BOX->get_obj_size() << "\n";
+        std::cerr << "Key1 " << BOX->at(0)->get_key() << " Val1:" << BOX->at(0)->val << std::endl;
+        std::cerr << "Key2 " << BOX->at(1)->get_key() << " Val2:" << BOX->at(1)->val << std::endl;
+        std::cerr << "Key2 " << BOX->at(2)->get_key() << " Val2:" << BOX->at(2)->val << std::endl;
+        // std::shared_ptr<Engine::Object> tmp{ITEM};
+        // BOX->insert(tmp);
+        // std::cout << "BOX size:" << BOX->get_obj_size() << "Key " << ITEM->get_key() << "Val " << ITEM->val << "\n";
+        //std::cout << "bb:" << SPACE->at(0)->val;
     //    BOX->insert<Engine::Object>();
     //    auto o1 = BOX->at(0);
     //    o1->val = 1;

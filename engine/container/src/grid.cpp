@@ -61,7 +61,7 @@ namespace Engine
     const std::shared_ptr<Object>& Grid::at(size_t x, size_t y, size_t z, size_t o)
     {
         const std::shared_ptr<Object>* tmp = &Object::null;
-        if(this->at(x, y, z) != nullptr)
+        if(this->at(x, y, z) != Box::null)
         {
             tmp = &this->coord.at(x).at(y).at(z)->at(o);
         }
@@ -97,7 +97,7 @@ namespace Engine
     cont_status Grid::swap(std::shared_ptr<Box>& a, std::shared_ptr<Box>& b)
     {
         cont_status ret = cont_status::CONT_NOK;
-        if((a != nullptr) && (b != nullptr) && (a.get() != b.get()))
+        if((a != Box::null) && (b != Box::null) && (a.get() != b.get()))
         {
             // std::shared_ptr<Box>* self1 = (*a)->get_self();
             // std::shared_ptr<Box>* self2 = (*b)->get_self();

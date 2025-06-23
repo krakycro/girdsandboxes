@@ -38,7 +38,7 @@ int main()
         {
             auto b = GRID->at(i,j,0);
             std::cout << b << "|"  << b->get_self() << " - " ;
-            for(size_t k=0; b->at(k) != nullptr && k < b->get_obj_size(); k++)
+            for(size_t k=0; b->at(k) != Engine::Object::get_null() && k < b->get_obj_size(); k++)
             {
                 auto o = b->at(k);
                 std::cout << o->get_key() << ":" << o->val << ", ";

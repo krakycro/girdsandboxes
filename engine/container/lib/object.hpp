@@ -22,13 +22,13 @@ namespace Engine
         friend Grid;
 
         private:
-            std::shared_ptr<Box> root;
-            std::shared_ptr<Object> self;
-
-            size_t key;
-
             static std::unordered_map<size_t, std::shared_ptr<Object>> olist;
             static std::shared_ptr<Object> null;
+
+            std::shared_ptr<Box> root{nullptr};
+            std::shared_ptr<Object> self{Object::null};
+
+            size_t key{0};
 
         public:
             static size_t oid;
@@ -40,6 +40,7 @@ namespace Engine
             //virtual ~Object() = default;
 
             static std::shared_ptr<Object>& create();
+            static const std::shared_ptr<Object>& get_null();
 
             const Coord* get_coord() const;
             const std::shared_ptr<Box>& get_root() const;

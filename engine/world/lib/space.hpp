@@ -19,8 +19,8 @@ namespace Engine
             Space(const Space& o) = delete;
             Space(const Space&&) = delete;
 
+            //using Box::insert;
             void insert();
-
     };
 
 }; // Engine

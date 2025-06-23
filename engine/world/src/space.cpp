@@ -15,10 +15,10 @@ namespace Engine
         
     }
 
-    void Space::insert()
-    {
-        this->Engine::Box::insert();
-        std::cout << "Space!" << std::endl;
-    }
+    // void Space::insert()
+    // {
+    //     this->Engine::Box::insert();
+    //     std::cout << "Space!" << std::endl;
+    // }
 
 }; // Engine

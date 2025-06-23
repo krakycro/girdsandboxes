@@ -24,13 +24,58 @@ namespace testContainer
       });
    }
 
-      TEST(testContainer, BoxEmpty)
+   TEST(testContainer, BoxEmpty)
    {
       ASSERT_NO_THROW({
          auto b1 = std::make_shared<Engine::Box>();
          b1->insert();
          auto o1 = b1->at(0);
          o1->val = 1;
+
+         auto o2 = b1->at(1);
+      });
+   }
+
+   TEST(testContainer, ObjEmpty)
+   {
+      ASSERT_NO_THROW({
+         auto b1 = std::make_shared<Engine::Box>();
+         auto o1 = std::make_shared<Engine::Object>();
+         o1->val = 1;
+         b1->insert(o1);
+         EXPECT_TRUE(b1->get_obj_size() == 0);
+      });
+   }
+
+   TEST(testContainer, ObjToBox)
+   {
+      ASSERT_NO_THROW({
+         auto b1 = std::make_shared<Engine::Box>();
+         auto b2 = std::make_shared<Engine::Box>();
+         auto o1 = Engine::Object::create();
+         auto o2 = Engine::Object::create();
+         o1->val = 2;
+         o2->val = 3;
+         
+         std::cout << "Operation" << std::endl;
+         b1->insert(o1);
+         EXPECT_TRUE(b1->get_obj_size() == 1);
+         b1->insert(o2);
+         std::cout << "Checking" << std::endl;
+         EXPECT_TRUE(b1->get_obj_size() == 2);
+         EXPECT_TRUE(b1->at(0)->val == 3);
+         EXPECT_TRUE(b1->at(1)->val == 2);
+
+         std::cout << "Operation" << std::endl;
+         o1 = b1->at(1);
+         o2 = b1->at(0);
+         b2->insert(o1);
+         EXPECT_TRUE(b2->get_obj_size() == 1);
+         b2->insert(o2);
+         std::cout << "Checking" << std::endl;
+         EXPECT_TRUE(b2->get_obj_size() == 2);
+         EXPECT_TRUE(b2->at(0)->val == 3);
+         EXPECT_TRUE(b2->at(1)->val == 2);
       });
    }
 

@@ -15,7 +15,7 @@ namespace Engine
             uint32_t density = 1;
 
         public:
-            Item();
+            Item() = default;
             Item(const Item& o) = delete;
             Item(const Item&&) = delete;
             //~Item() = default;
