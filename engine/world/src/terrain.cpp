@@ -2,10 +2,11 @@
 
 namespace Engine
 {
+    const size_t Terrain::classid;
 
-    Terrain::Terrain()
-    {
+    // Terrain::Terrain()
+    // {
         
-    }
+    // }
 
 }; // Engine

@@ -22,6 +22,9 @@ namespace Engine
             std::vector<std::vector<std::vector<std::shared_ptr<Box>>>> coord;
 
         public:
+            static const size_t classid = ClassFlag(CONT_LAYER_ZERO, CONT_TYPE_GRID, CONT_ENUM_ONE);
+            const size_t * const myclass;
+
             Grid() = delete;
             Grid(const Grid& o) = delete;
             Grid(const Grid&&) = delete;
@@ -38,7 +41,7 @@ namespace Engine
             size_t get_size_y() const;
             size_t get_size_z() const;
 
-        private:
+        protected:
             void set_coord(size_t x, size_t y, size_t z);
     };
 

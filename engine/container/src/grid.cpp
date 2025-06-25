@@ -5,8 +5,9 @@
 
 namespace Engine
 {
+    const size_t Grid::classid;
 
-    Grid::Grid(size_t size_x, size_t size_y, size_t size_z)
+    Grid::Grid(size_t size_x, size_t size_y, size_t size_z):myclass{&Grid::classid}
     {
         this->size_x = size_x < 1 ? 1 : size_x;
         this->size_y = size_y < 1 ? 1 : size_y;

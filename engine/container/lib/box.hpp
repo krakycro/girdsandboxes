@@ -14,8 +14,8 @@ namespace Engine
     class Object;
     class Grid;
 
-    //class Item;
-    //class Terrain;
+    // class Item;
+    // class Terrain;
 
     class Box: public Coord
     {
@@ -27,12 +27,15 @@ namespace Engine
 
             std::shared_ptr<Box>* self{nullptr};
             std::unordered_map<size_t, std::shared_ptr<Object>> obj;
-
+        
         public:
+            static const size_t classid = ClassFlag(CONT_LAYER_ZERO, CONT_TYPE_BOX, CONT_ENUM_ONE);
+            const size_t * const myclass;
+
             Box();
             Box(const Box& o) = delete;
             Box(const Box&&) = delete;
-            //virtual ~Box() = default;
+            // virtual ~Box() = default;
 
             // std::shared_ptr<Object>* at(size_t i);
             const std::shared_ptr<Object>& at(size_t i);
@@ -40,15 +43,16 @@ namespace Engine
 
             void insert();
             void insert(std::shared_ptr<Object>& a);
+            void insert(std::shared_ptr<Object>&& a);
 
             static cont_status swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b);
             static const std::shared_ptr<Box>& get_null();
 
             // Geters/Setters
             size_t get_obj_size() const;
-            const std::shared_ptr<Box>& get_self();
+            const std::shared_ptr<Box>& get_self() const;
 
-        private:
+        protected:
             std::shared_ptr<Object>* point(size_t key);
             std::shared_ptr<Box>* point_self();
             // std::shared_ptr<std::unordered_map<size_t, std::shared_ptr<Object>>>& get_obj();

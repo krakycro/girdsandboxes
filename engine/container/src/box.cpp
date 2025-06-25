@@ -10,8 +10,9 @@ namespace Engine
     // template void Box::insert<Terrain>();
 
     std::shared_ptr<Box> Box::null(nullptr);
+    const size_t Box::classid;
 
-    Box::Box()
+    Box::Box():myclass{&Box::classid}
     {
         this->set_coord(0,0,0);
         this->set_self(&Box::null);
@@ -76,11 +77,10 @@ namespace Engine
 
     void Box::insert()
     {
-        std::cout << "Box!" << std::endl;
         if(this->self != nullptr)
         {
-            auto tmp = Object::create();
-            tmp->set_root(this->point_self());
+            auto tmp = Object::BaseCreate(std::make_shared<Object>());
+            tmp->set_root(this->get_self());
             this->obj.insert({tmp->get_key(), std::move(tmp)});
         }
     }
@@ -101,7 +101,7 @@ namespace Engine
             }
             if(self != nullptr)
             {
-                (*self)->set_root(this->point_self());
+                (*self)->set_root(this->get_self());
                 if(this->obj.contains((*self)->get_key()) == true)
                 {
                     this->obj.at((*self)->get_key()) = std::move(*self);
@@ -120,6 +120,11 @@ namespace Engine
         {
             
         }
+    }
+
+    void Box::insert(std::shared_ptr<Object>&& a)
+    {
+        this->insert(a);
     }
 
     cont_status Box::swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b)
@@ -151,7 +156,7 @@ namespace Engine
         return (this->self != nullptr)? this->self : nullptr;
     }
 
-    const std::shared_ptr<Box>& Box::get_self()
+    const std::shared_ptr<Box>& Box::get_self() const
     {
         return (this->self != nullptr)? *this->self : Box::null;
     }

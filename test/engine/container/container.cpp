@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <iostream>
+#include <iomanip>
 #include <memory>
 
 #include <container/container.hpp>
@@ -13,6 +14,26 @@ namespace testContainer
    {
       ASSERT_NO_THROW({
          GRID = std::unique_ptr<Engine::Grid>(new Engine::Grid(2, 2, 2));
+      });
+   }
+
+   TEST(testContainer, ClassId)
+   {
+      ASSERT_NO_THROW({
+         std::cout << "Grid id: " << std::setfill('0') << std::setw(8) << std::uppercase << std::hex << Engine::Grid::classid << std::endl;
+         EXPECT_TRUE(Engine::Grid::classid == 0x00000001);
+         std::cout << "Local id: " << std::setfill('0') << std::setw(8) << std::uppercase << std::hex << *GRID->myclass << std::endl;
+         EXPECT_TRUE(Engine::Grid::classid == *GRID->myclass);
+         std::cout << "Box id: " << std::setfill('0') << std::setw(8) << std::uppercase << std::hex << Engine::Box::classid << std::endl;
+         EXPECT_TRUE(Engine::Box::classid == 0x00000100);
+         auto o2 = std::make_shared<Engine::Box>();
+         std::cout << "Local id: " << std::setfill('0') << std::setw(8) << std::uppercase << std::hex << *o2->myclass << std::endl;
+         EXPECT_TRUE(Engine::Box::classid == *o2->myclass);
+         std::cout << "Object id: " << std::setfill('0') << std::setw(8) << std::uppercase << std::hex << Engine::Object::classid << std::endl;
+         EXPECT_TRUE(Engine::Object::classid == 0x00010000);
+         auto o3 = std::make_shared<Engine::Object>();
+         std::cout << "Local id: " << std::setfill('0') << std::setw(8) << std::uppercase << std::hex << *o3->myclass << std::endl;
+         EXPECT_TRUE(Engine::Object::classid == *o3->myclass);
       });
    }
 
@@ -52,8 +73,8 @@ namespace testContainer
       ASSERT_NO_THROW({
          auto b1 = std::make_shared<Engine::Box>();
          auto b2 = std::make_shared<Engine::Box>();
-         auto o1 = Engine::Object::create();
-         auto o2 = Engine::Object::create();
+         auto o1 = Engine::Object::Create();
+         auto o2 = Engine::Object::Create();
          o1->val = 2;
          o2->val = 3;
          

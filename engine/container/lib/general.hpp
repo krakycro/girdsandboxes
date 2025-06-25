@@ -8,40 +8,48 @@
 
 namespace Engine
 {
-
     enum cont_status
     {
         CONT_OK =0,
         CONT_NOK,
     };
 
-    template <class T>
-    class container_ptr : public std::shared_ptr<T>
+    enum cont_class_flag
     {
-        public:
-            // T* operator -> ()
-            // {
-            //     // std::cout << "get" << std::endl;
-            //     return this->get();
-            // }
+        CONT_FLAG_GRID = 0x000000FF,
+        CONT_FLAG_BOX  = 0x0000FF00,
+        CONT_FLAG_OBJ  = 0x00FF0000,
+        CONT_FLAG_DAT  = 0x00FFFFFF,
+        CONT_FLAG_LVL  = 0xFF000000,
+    };
 
-            // container_ptr<T>& operator = (const container_ptr<T>& a)
-            // {
-            //     std::cout << "const copy " << a << std::endl;
-            //     return *this;
-            // }
+    enum cont_class_type
+    {
+        CONT_TYPE_GRID = 0,
+        CONT_TYPE_BOX  = 8,
+        CONT_TYPE_OBJ  = 16,
+        CONT_TYPE_LVL  = 24,
+    };
 
-            // container_ptr<T>& operator = (container_ptr<T> a)
-            // {
-            //     std::cout << "copy " << a << std::endl;
-            //     return *this;
-            // }
+    enum cont_class_layer
+    {
+        CONT_LAYER_ZERO  = 0,
+        CONT_LAYER_ONE   = 1,
+        CONT_LAYER_TWO   = 2,
+        CONT_LAYER_THREE = 3,
+    };
 
-            // container_ptr<T>& operator = (container_ptr<T>&& a)
-            // {
-            //     std::cout << "move" << std::endl;
-            //     return *this;
-            // }
+    enum cont_class_enum
+    {
+        CONT_ENUM_ONE   = 1,
+        CONT_ENUM_TWO   = 2,
+        CONT_ENUM_THREE = 3,
+        CONT_ENUM_FOUR  = 4,
+    };
+
+    constexpr size_t ClassFlag(const cont_class_layer layer, const cont_class_type type, const cont_class_enum var)
+    {
+        return (layer << CONT_TYPE_LVL) | ((var) << type);
     };
 
 }; // Engine

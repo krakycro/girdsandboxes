@@ -10,7 +10,9 @@ namespace Engine
     // template void Space::insert<Item>();
     // template void Space::insert<Terrain>();
 
-    Space::Space()
+    const size_t Space::classid;
+
+    Space::Space():myclass{&Space::classid}
     {
         
     }

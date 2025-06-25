@@ -14,7 +14,7 @@ namespace Engine
     class Box;
     class Grid;
 
-    //class Item;
+    // class Item;
 
     class Object
     {
@@ -31,27 +31,33 @@ namespace Engine
             size_t key{0};
 
         public:
+            static const size_t classid = ClassFlag(CONT_LAYER_ZERO, CONT_TYPE_OBJ, CONT_ENUM_ONE);
+            const size_t * const myclass;
+
             static size_t oid;
             size_t val;
 
-            Object() = default;
+            Object():myclass{&Object::classid} {};
             Object(const Object& o) = delete;
             Object(const Object&&) = delete;
-            //virtual ~Object() = default;
+            // virtual ~Object() = default;
 
-            static std::shared_ptr<Object>& create();
+            static std::shared_ptr<Object>& Create();
             static const std::shared_ptr<Object>& get_null();
 
             const Coord* get_coord() const;
             const std::shared_ptr<Box>& get_root() const;
-            const std::shared_ptr<Object>& get_self();
+            const std::shared_ptr<Object>& get_self() const;
             size_t get_key() const;
 
-        private:
-            void set_root(std::shared_ptr<Box>* root_obj);
+
+        protected:
+            static std::shared_ptr<Object>& BaseCreate(std::shared_ptr<Object>&& a);
+            void set_root(const std::shared_ptr<Box>& root_obj);
             void set_self(std::shared_ptr<Object>& self_obj);
             void set_key(size_t new_key);
 
+            static std::unordered_map<size_t, std::shared_ptr<Object>>& get_olist();
     };
 
 }; // Engine
