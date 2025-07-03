@@ -34,8 +34,7 @@ namespace Engine
             const std::shared_ptr<Box>& at(size_t x, size_t y, size_t z);
             const std::shared_ptr<Object>& at(size_t x, size_t y, size_t z, size_t o);
 
-            // static cont_status swap(std::shared_ptr<Box>* a, std::shared_ptr<Box>* b);
-            static cont_status swap(std::shared_ptr<Box>& a, std::shared_ptr<Box>& b);
+            static cont_status swap(const std::shared_ptr<Box>& a, const std::shared_ptr<Box>& b);
 
             size_t get_size_x() const;
             size_t get_size_y() const;

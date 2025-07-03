@@ -10,7 +10,7 @@ namespace Engine
 
     const size_t Object::classid;
     size_t Object::oid = 1;
-    std::shared_ptr<Object> Object::null(nullptr);
+    std::shared_ptr<Object> Object::null = std::make_shared<Object>();
     std::unordered_map<size_t, std::shared_ptr<Object>> Object::olist;
 
     std::shared_ptr<Object>& Object::BaseCreate(std::shared_ptr<Object>&& a)
@@ -37,6 +37,11 @@ namespace Engine
     const std::shared_ptr<Box>& Object::get_root() const
     {
         return (this->root != nullptr)? this->root : Box::null;
+    }
+
+    std::shared_ptr<Object> Object::point_self()
+    {
+        return (this->self != nullptr) ? this->self : nullptr;
     }
 
     const std::shared_ptr<Object>& Object::get_self() const
@@ -70,6 +75,11 @@ namespace Engine
     }
 
     std::unordered_map<size_t, std::shared_ptr<Object>>& Object::get_olist()
+    {
+        return Object::olist;
+    }
+
+    const std::unordered_map<size_t, std::shared_ptr<Object>>& Object::GetAllObjects()
     {
         return Object::olist;
     }

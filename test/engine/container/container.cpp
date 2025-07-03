@@ -283,8 +283,8 @@ namespace testContainer
       EXPECT_TRUE(c2->get_z() == 1);
 
       std::cout << "Checking val" << std::endl;
-      ASSERT_DEATH({(GRID->at(1,1,0,0))->val = 5;}, "");
-      EXPECT_TRUE((GRID->at(1,1,0,0)) == nullptr);
+      ASSERT_NO_THROW({(GRID->at(1,1,0,0))->val = 5;});
+      EXPECT_TRUE((GRID->at(1,1,0,0)) == Engine::Object::null);
       EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
       EXPECT_TRUE((GRID->at(1,1,1,0))->val == 11);
       EXPECT_TRUE((GRID->at(1,1,1,1))->val == 2);
@@ -292,7 +292,7 @@ namespace testContainer
 
       std::cout << "Checking move" << std::endl;
       auto o3 = b1->at(0);
-      EXPECT_TRUE(o3 == nullptr);
+      EXPECT_TRUE(o3 == Engine::Object::null);
    }
 
    TEST(testContainer, GetKey)
@@ -305,7 +305,7 @@ namespace testContainer
       std::cout << "Checking" << std::endl;
       auto g1 = b->get(o1->get_key());
       EXPECT_TRUE(g1->val == 6);
-      ASSERT_DEATH(b->get((o2)->get_key()), "");
+      ASSERT_NO_THROW(b->get((o2)->get_key()));
    }
 
    TEST(testContainer, MoveBack)
@@ -333,7 +333,7 @@ namespace testContainer
       std::cout << "Checking var" << std::endl;
       EXPECT_TRUE((GRID->at(1,1,0,0))->val == 11);
       EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
-      EXPECT_TRUE((GRID->at(1,1,1,0)) == nullptr);
+      EXPECT_TRUE((GRID->at(1,1,1,0)) == Engine::Object::null);
       EXPECT_TRUE((GRID->at(1,1,1,1))->val == 2);
       EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
    }
@@ -364,7 +364,7 @@ namespace testContainer
       std::cout << "Checking var" << std::endl;
       EXPECT_TRUE((GRID->at(1,1,0,0))->val == 11);
       EXPECT_TRUE((GRID->at(1,1,0,1))->val == 6);
-      EXPECT_TRUE((GRID->at(1,1,1,0)) == nullptr);
+      EXPECT_TRUE((GRID->at(1,1,1,0)) == Engine::Object::null);
       EXPECT_TRUE((GRID->at(1,1,1,1))->val == 2);
       EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
    }
@@ -389,10 +389,10 @@ namespace testContainer
    {
       std::cout << "Checking val" << std::endl;
       EXPECT_TRUE((GRID->at(1,1,0,0))->val == 2);
-      EXPECT_TRUE((GRID->at(1,1,0,1)) == nullptr);
+      EXPECT_TRUE((GRID->at(1,1,0,1)) == Engine::Object::null);
       EXPECT_TRUE((GRID->at(1,1,0,2))->val == 6);
       EXPECT_TRUE((GRID->at(1,1,1,0))->val == 11);
-      EXPECT_TRUE((GRID->at(1,1,1,1)) == nullptr);
+      EXPECT_TRUE((GRID->at(1,1,1,1)) == Engine::Object::null);
       EXPECT_TRUE((GRID->at(1,1,1,2))->val == 4);
 
       std::cout << "Checking get" << std::endl;

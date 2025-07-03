@@ -10,7 +10,7 @@ namespace Engine
 {
     enum cont_status
     {
-        CONT_OK =0,
+        CONT_OK = 0,
         CONT_NOK,
     };
 

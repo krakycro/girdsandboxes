@@ -73,45 +73,14 @@ namespace Engine
         return *tmp;
     }
 
-    // cont_status Grid::swap(std::shared_ptr<Box>* a, std::shared_ptr<Box>* b)
-    // {
-    //     cont_status ret = cont_status::CONT_NOK;
-    //     if((a != nullptr) && (b != nullptr) && (a->get() != b->get()))
-    //     {
-    //         auto coordA = (*a)->get_coord();
-    //         auto coordB = (*b)->get_coord();
-    //         auto tmp = std::move(*a);
-    //         *a = std::move(*b);
-    //         (*a)->set_coord(coordA);
-    //         *b = std::move(tmp);
-    //         (*b)->set_coord(coordB);
-
-    //         ret = cont_status::CONT_OK;
-    //     }
-    //     else
-    //     {
-            
-    //     }
-    //     return ret;
-    // }
-
-    cont_status Grid::swap(std::shared_ptr<Box>& a, std::shared_ptr<Box>& b)
+    cont_status Grid::swap(const std::shared_ptr<Box>& a, const std::shared_ptr<Box>& b)
     {
         cont_status ret = cont_status::CONT_NOK;
-        if((a != Box::null) && (b != Box::null) && (a.get() != b.get()))
+        if((a != Box::null) && (b != Box::null)
+           && (a->get_self() != Box::null) && (b->get_self() != Box::null)
+           && (a->get_self() != b->get_self())
+           && (a.get() != b.get()))
         {
-            // std::shared_ptr<Box>* self1 = (*a)->get_self();
-            // std::shared_ptr<Box>* self2 = (*b)->get_self();
-            // auto coordA = (*self1)->get_coord();
-            // auto coordB = (*self2)->get_coord();
-            // auto tmp = std::move((*self1));
-            // (*self1) = std::move((*self2));
-            // (*self1)->set_coord(coordA);
-            // (*self2) = std::move(tmp);
-            // (*self2)->set_coord(coordB);
-            // (*self1)->set_self(self1);
-            // (*self2)->set_self(self2);
-
             auto self1 = a->point_self();
             auto self2 = b->point_self();
             auto coordA = (*self1)->get_tuple();

@@ -9,13 +9,21 @@ namespace Engine
     // template void Box::insert<Item>();
     // template void Box::insert<Terrain>();
 
-    std::shared_ptr<Box> Box::null(nullptr);
+    std::shared_ptr<Box> Box::null = std::make_shared<Box>();
     const size_t Box::classid;
 
     Box::Box():myclass{&Box::classid}
     {
         this->set_coord(0,0,0);
         this->set_self(&Box::null);
+    }
+
+    std::shared_ptr<Box> Box::Create()
+    {
+        auto tmp = std::make_shared<Box>();
+        tmp->set_self(&tmp);
+        tmp->set_coord(0,0,0);
+        return tmp;
     }
 
     const std::shared_ptr<Object>& Box::at(size_t i)
@@ -29,7 +37,7 @@ namespace Engine
             {
                 iter++;
             }
-            if((iter->second != Object::null)) // No need: && (this->obj.find(iter->second->key) != this->obj.end()))
+            if((iter->second != nullptr) && (iter->second != Object::null)) // No need: && (this->obj.find(iter->second->key) != this->obj.end()))
             {
                 tmp = &this->obj.at(iter->second->get_key());
             }
@@ -85,15 +93,15 @@ namespace Engine
         }
     }
 
-    void Box::insert(std::shared_ptr<Object>& a)
+    void Box::insert(const std::shared_ptr<Object>& a)
     {
-        if(a != Object::null && a->get_self() != Object::null)
+        if((this->self != nullptr) && (a != Object::null) && (a->get_self() != Object::null))
         {
-            std::shared_ptr<Engine::Object> *self{nullptr};
+            std::shared_ptr<Engine::Object> * self{nullptr};
             auto root = a->get_root();
             if(root == Box::null)
             {
-                self = &a;
+                self = (std::shared_ptr<Engine::Object> *)&a;
             }
             else
             {
@@ -113,24 +121,28 @@ namespace Engine
             }
             else
             {
-
+                //fprintf(stderr, "Box::insert: self is nullptr for key %zu\n", a->get_key());
             }
         }
         else
         {
-            
+            //fprintf(stderr, "Box::insert: self is nullptr or Object is null for key %zu\n", a->get_key());
         }
     }
 
-    void Box::insert(std::shared_ptr<Object>&& a)
+    void Box::insert(const std::shared_ptr<Object>&& a)
     {
         this->insert(a);
     }
 
-    cont_status Box::swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b)
+    cont_status Box::swap(const std::shared_ptr<Object>& a, const std::shared_ptr<Object>& b)
     {
         cont_status ret = cont_status::CONT_NOK;
-    if((a != Object::null) && (b != Object::null) && ((a)->get_key() != (b)->get_key()))
+        if((a != nullptr) && (b != nullptr)
+            && (a != Object::null) && (b != Object::null)
+            && (a->get_root() != Box::null) && (b->get_root() != Box::null)
+            && (a->get_root() != b->get_root())
+            && ((a)->get_key() != (b)->get_key()))
         { 
             auto rootA = (a)->get_root();
             auto rootB = (b)->get_root();

@@ -23,12 +23,13 @@ namespace Engine
         friend Grid;
 
         private:
-            static std::shared_ptr<Box> null;
+            //static std::shared_ptr<Box> null;
 
             std::shared_ptr<Box>* self{nullptr};
             std::unordered_map<size_t, std::shared_ptr<Object>> obj;
         
         public:
+            static std::shared_ptr<Box> null;
             static const size_t classid = ClassFlag(CONT_LAYER_ZERO, CONT_TYPE_BOX, CONT_ENUM_ONE);
             const size_t * const myclass;
 
@@ -42,10 +43,11 @@ namespace Engine
             const std::shared_ptr<Object>& get(size_t key);
 
             void insert();
-            void insert(std::shared_ptr<Object>& a);
-            void insert(std::shared_ptr<Object>&& a);
+            void insert(const std::shared_ptr<Object>& a);
+            void insert(const std::shared_ptr<Object>&& a);
 
-            static cont_status swap(std::shared_ptr<Object>& a, std::shared_ptr<Object>& b);
+            static std::shared_ptr<Box> Create();
+            static cont_status swap(const std::shared_ptr<Object>& a, const std::shared_ptr<Object>& b);
             static const std::shared_ptr<Box>& get_null();
 
             // Geters/Setters
